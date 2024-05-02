@@ -11,6 +11,8 @@ module org.loli.dictionary {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires java.sql;
+    requires voicerss.tts;
+    requires javafx.media;
 
     opens controller to javafx.fxml;
     exports controller;
