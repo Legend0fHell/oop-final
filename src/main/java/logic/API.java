@@ -87,6 +87,5 @@ public class API {
         Media input = new Media(audioURI.toString());
         MediaPlayer audio = new MediaPlayer(input);
         audio.play();
-
     }
 }
