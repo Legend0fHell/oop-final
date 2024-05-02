@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="650.0" style="-fx-background-color: #b5a881;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.QuizGameController">
+   <children>
+      <Button fx:id="answerA" layoutX="56.0" layoutY="439.0" mnemonicParsing="false" onAction="#answerAClicked" prefHeight="77.0" prefWidth="81.0" style="-fx-background-color: #667980;" text="A">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Button>
+      <Button fx:id="answerB" layoutX="206.0" layoutY="439.0" mnemonicParsing="false" onAction="#answerBClicked" prefHeight="77.0" prefWidth="81.0" style="-fx-background-color: #667980;" text="B">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Button>
+      <Button fx:id="answerC" layoutX="351.0" layoutY="439.0" mnemonicParsing="false" onAction="#answerCClicked" prefHeight="77.0" prefWidth="81.0" style="-fx-background-color: #667980;" text="C">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Button>
+      <Button fx:id="answerD" layoutX="498.0" layoutY="439.0" mnemonicParsing="false" onAction="#answerDClicked" prefHeight="77.0" prefWidth="81.0" style="-fx-background-color: #667980;" text="D">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Button>
+      <Text fx:id="bigQuestionTextField" fill="#773535" layoutX="56.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mark the letter A, B, C, or D on your answer sheet to indicate the word that differs from the other three in the position of primary stress in each of the following questions." wrappingWidth="543.6666450500488">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="timerTextField" layoutX="233.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time left: 60 second">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="exitButton" layoutX="577.0" mnemonicParsing="false" onAction="#exitButtonClicked" prefHeight="40.0" prefWidth="72.0" style="-fx-background-color: #806766;" text="Exit" textFill="#512727">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font></Button>
+      <Text fx:id="scoreTextField" layoutX="21.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Score 50" wrappingWidth="151.9999999999999">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="smallQuestionTextField" fill="#2b2902" layoutX="53.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question number 5:  A. darkness B. sister C. market D. remark" wrappingWidth="543.6666450500488">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="endGameText" fill="#a34848" layoutX="2.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="congratulation.  Your answer correctly 20 out of 20 questions" textAlignment="CENTER" wrappingWidth="649.9999999999999">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="startButton" layoutX="252.0" layoutY="252.0" mnemonicParsing="false" onAction="#startButtonClicked" prefHeight="46.0" prefWidth="152.0" style="-fx-background-color: #b3a92b;" text="Start Game" textFill="#9d1313">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="resetButton" layoutX="249.0" layoutY="253.0" mnemonicParsing="false" onAction="#reset" prefHeight="43.0" prefWidth="152.0" style="-fx-background-color: #b3a92b;" text="Play again" textFill="#a63333">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
