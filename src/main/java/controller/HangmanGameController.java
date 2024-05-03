@@ -1,5 +1,6 @@
 package controller;
 
+import database.Database;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -8,10 +9,15 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
 import javafx.scene.text.Text;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
+import logic.Word;
 
 import java.io.*;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.*;
 
 public class HangmanGameController implements Initializable {
@@ -36,6 +42,8 @@ public class HangmanGameController implements Initializable {
     private Text timerText;
     @FXML
     private Text guideText;
+    @FXML
+    private Text usedWordText;
 
     @FXML
     private Button enterButton;
@@ -50,22 +58,24 @@ public class HangmanGameController implements Initializable {
     @FXML
     private Button backHomeButton;
 
+
     private Alert warningAlert;
     private Alert confirmationAlert;
     private Timer timer;
-    private String word;
+    //private String word;
     private int countDown = 30;
     private int questionNumber = 0;
     private int score = 0;
     private int highestScore;
     private int livePose = 0;
-    private int lineNumber = 0;
 
     private boolean isPlaying;
 
-
-    private HashMap<Integer, String> guessWord;
     private List<Character> usedCharacter;
+
+    private Database database;
+    private Word word;
+
 
     private StringBuilder secretWord = new StringBuilder();
 
@@ -150,21 +160,16 @@ public class HangmanGameController implements Initializable {
         usedCharacter = new ArrayList<>();
         //insert database into a LinkHashMap.
         //count the lineNumber as the number of words.
-        guessWord = new LinkedHashMap<>();
+
 
         try {
-            File file = new File("src/main/resources/HangmanGame/words.txt");
-            FileReader fileReader = new FileReader(file);
-            BufferedReader reader = new BufferedReader(fileReader);
-            String line = reader.readLine();
-            while (line != null) {
-                guessWord.put(++lineNumber, line);
-                line = reader.readLine();
-            }
-            reader.close();
-        } catch (IOException e) {
+            database = new Database();
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        word = new Word();
+
+
 
         // set Highest score.
 
@@ -179,7 +184,7 @@ public class HangmanGameController implements Initializable {
         resetButton.setVisible(false);
         backHomeButton.setVisible(false);
         nextQuestion.setVisible(false);
-
+        usedWordText.setVisible(false);
         timerText.setVisible(false);
         imageViewHangman.setVisible(false);
         textForWord.setVisible(false);
@@ -190,8 +195,8 @@ public class HangmanGameController implements Initializable {
         questionNumberText.setVisible(false);
         endGameText.setVisible(false);
 
-
         startButton.setVisible(true);
+
 
 
     }
@@ -233,6 +238,15 @@ public class HangmanGameController implements Initializable {
 
     @FXML
     protected void startGame() {
+        guessTextField.setOnKeyPressed(keyEvent -> {
+            if (keyEvent.getCode() == KeyCode.ENTER) {
+                try {
+                    playTurn();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        });
 
 
         enterButton.setVisible(true);
@@ -247,9 +261,11 @@ public class HangmanGameController implements Initializable {
         guideText.setVisible(true);
         scoreText.setVisible(true);
         questionNumberText.setVisible(true);
-
+        usedWordText.setVisible(true);
 
         startButton.setVisible(false);
+
+
 
         reset();
 
@@ -281,6 +297,7 @@ public class HangmanGameController implements Initializable {
         scoreText.setVisible(false);
         questionNumberText.setVisible(false);
         endGameText.setVisible(false);
+        usedWordText.setVisible(false);
 
         startButton.setVisible(true);
 
@@ -325,6 +342,7 @@ public class HangmanGameController implements Initializable {
 
     protected void setupWord() {
         isPlaying = true;
+        int random;
 
         // delete the guess word before
         this.textForWord.setText("");
@@ -335,24 +353,31 @@ public class HangmanGameController implements Initializable {
         questionNumber++;
         questionNumberText.setText("Question number " + questionNumber);
 
-        int random = (int) (Math.random() * lineNumber);
-        word = guessWord.get(random);
-        int numberOfHint = word.length() / 3;
+        // set word from database
+        word = database.getRandomWord();
+        while (word.getName().length() > 10 || word.getName().length() < 2 || word.getName().contains("-")) {
+
+            word = database.getRandomWord();
+        }
+
+        int numberOfHint = word.getName().length() / 3;
         ArrayList<Integer> hintList = new ArrayList<>();
         for (int i = 0; i < numberOfHint; i++) {
-            random = (int) (Math.random() * (word.length() - 1));
+            random = (int) (Math.random() * (word.getName().length() - 1));
             hintList.add(random);
         }
 
-        for (int i = 0; i < word.length(); i++) {
+        for (int i = 0; i < word.getName().length(); i++) {
             if (!hintList.contains(i)) {
                 secretWord.append("*");
             } else {
-                secretWord.append(word.charAt(i));
+                secretWord.append(word.getName().charAt(i));
             }
 
         }
 
+        guessTextField.setEditable(true);
+        usedWordText.setText("a b c d e f g h i j k l m n o p q r s t u v w x y z");
         textForWord.setText(secretWord.toString());
         counting();
     }
@@ -431,7 +456,7 @@ public class HangmanGameController implements Initializable {
         endGameText.setVisible(true);
         enterButton.setDisable(true);
         resetButton.setVisible(true);
-        textForWord.setText(word);
+        textForWord.setText(word.getName());
     }
 
     /**
@@ -457,24 +482,39 @@ public class HangmanGameController implements Initializable {
         }
 
         char guess = this.guessTextField.getText().charAt(0);
+        guess = Character.toLowerCase(guess);
+
+
+        if (!usedCharacter.contains(guess)) {
+            StringBuilder temp = new StringBuilder();
+            temp.append(usedWordText.getText());
+            for (int i = 0; i < temp.length(); i++) if (temp.charAt(i) == guess) {
+                temp.deleteCharAt(i);
+                break;
+            }
+            usedWordText.setText(temp.toString());
+        }
+
 
         // if the answer is correct.
-        if (word.contains(guess + "") && !usedCharacter.contains(guess)) {
+        if (word.getName().contains(guess + "") && !usedCharacter.contains(guess)) {
             usedCharacter.add(guess);
-            for (int i = 0; i < word.length(); i++) {
-                if (word.charAt(i) == guess) {
+            for (int i = 0; i < word.getName().length(); i++) {
+                if (word.getName().charAt(i) == guess) {
                     secretWord.setCharAt(i, guess);
                 }
             }
             textForWord.setText(secretWord.toString());
 
-            if (word.equals(this.textForWord.getText())) {
+            if (word.getName().equals(this.textForWord.getText())) {
 
                 score += 10;
                 updateHighestScore(score);
 
                 scoreText.setText("Score " + this.score);
                 endGameText.setText("Correct! Next question?");
+                guessTextField.setEditable(false);
+
                 endGameText.setVisible(true);
                 enterButton.setDisable(true);
                 nextQuestion.setVisible(true);
@@ -496,7 +536,11 @@ public class HangmanGameController implements Initializable {
                 endGameText.setVisible(true);
                 enterButton.setDisable(true);
                 resetButton.setVisible(true);
-                textForWord.setText(word);
+
+                guessTextField.setEditable(false);
+
+
+                textForWord.setText(word.getName());
                 timer.cancel();
 
             }

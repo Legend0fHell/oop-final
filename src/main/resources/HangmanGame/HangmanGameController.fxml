@@ -10,7 +10,7 @@
 
 <AnchorPane prefHeight="550.0" prefWidth="650.0" style="-fx-background-color: #818a8f;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HangmanGameController">
    <children>
-      <ImageView fx:id="imageViewHangman" fitHeight="354.0" fitWidth="207.0" layoutX="69.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imageViewHangman" fitHeight="389.0" fitWidth="202.0" layoutX="69.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@HangmanPictures/0.jpg" />
          </image>
@@ -24,12 +24,12 @@
             <Font name="Candara Bold" size="17.0" />
          </font>
       </Text>
-      <Text fx:id="textForWord" layoutX="339.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="textForWord" wrappingWidth="250.80331420898438">
+      <Text fx:id="textForWord" layoutX="338.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="textForWord" wrappingWidth="250.80331420898438">
          <font>
             <Font name="Candara Bold" size="28.0" />
          </font>
       </Text>
-      <Text fx:id="endGameText" layoutX="329.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="endGameText">
+      <Text fx:id="endGameText" layoutX="310.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You lose! Play again?\n&quot;  &quot;Your highest score: " wrappingWidth="307.55078125">
          <font>
             <Font name="Candara Bold" size="24.0" />
          </font>
@@ -49,7 +49,7 @@
             <Font name="Candara Bold" size="25.0" />
          </font>
       </Text>
-      <Button fx:id="resetButton" layoutX="379.0" layoutY="391.0" mnemonicParsing="false" onAction="#reset" prefHeight="41.0" prefWidth="43.0" style="-fx-background-color: #818a8f;">
+      <Button fx:id="resetButton" layoutX="590.0" layoutY="320.0" mnemonicParsing="false" onAction="#reset" prefHeight="41.0" prefWidth="43.0" style="-fx-background-color: #818a8f;">
          <font>
             <Font name="Candara Bold" size="23.0" />
          </font>
@@ -59,7 +59,7 @@
             <Font name="Candara Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="nextQuestion" layoutX="373.0" layoutY="394.0" mnemonicParsing="false" onAction="#nextQuestion" style="-fx-background-color: #818a8f;">
+      <Button fx:id="nextQuestion" layoutX="405.0" layoutY="343.0" mnemonicParsing="false" onAction="#nextQuestion" style="-fx-background-color: #818a8f;">
          <font>
             <Font name="Candara Bold" size="21.0" />
          </font>
@@ -75,5 +75,10 @@
          </font>
       </Button>
       <Button fx:id="backHomeButton" layoutX="590.0" layoutY="1.0" mnemonicParsing="false" onAction="#beforeStartGame" prefHeight="34.0" prefWidth="55.0" style="-fx-background-color: #818a8f;" />
+      <Text fx:id="usedWordText" layoutX="284.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="a b c d e f g h i j k l m n o p q r s t u v w x y z   " wrappingWidth="333.90240478515625">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

@@ -104,7 +104,7 @@ public class QuizGameController implements Initializable {
         List<String> fileNames = new ArrayList<>(
                 Arrays.asList(
                         "src/main/java/database/EnglishQuizGame/ClosetMeaning.txt",
-                        "src/main/java/database/EnglishQuizGame/Comparision.txt",
+                        "src/main/java/database/EnglishQuizGame/Comparison.txt",
                         "src/main/java/database/EnglishQuizGame/ModelVerb.txt",
                         "src/main/java/database/EnglishQuizGame/Pronunciation.txt",
                         "src/main/java/database/EnglishQuizGame/TagQuestion.txt"
