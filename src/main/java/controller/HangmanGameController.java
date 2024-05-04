@@ -58,6 +58,10 @@ public class HangmanGameController implements Initializable {
     @FXML
     private Button backHomeButton;
 
+    @FXML
+    private WebView webView;
+    private WebEngine engine;
+
 
     private Alert warningAlert;
     private Alert confirmationAlert;
@@ -111,7 +115,7 @@ public class HangmanGameController implements Initializable {
 
         // set initial image of hangman when start the game
         image = new Image(Objects.requireNonNull(getClass()
-                .getResourceAsStream(humanLives.get(0))));
+                .getResourceAsStream(humanLives.getFirst())));
         imageViewHangman.setImage(image);
 
         // set icon image to backHome button.
@@ -179,6 +183,8 @@ public class HangmanGameController implements Initializable {
             throw new RuntimeException(e);
         }
 
+        engine = webView.getEngine();
+
         enterButton.setVisible(false);
         deleteButton.setVisible(false);
         resetButton.setVisible(false);
@@ -195,10 +201,9 @@ public class HangmanGameController implements Initializable {
         questionNumberText.setVisible(false);
         endGameText.setVisible(false);
 
+        webView.setVisible(false);
+
         startButton.setVisible(true);
-
-
-
     }
 
     /**
@@ -299,6 +304,8 @@ public class HangmanGameController implements Initializable {
         endGameText.setVisible(false);
         usedWordText.setVisible(false);
 
+        webView.setVisible(false);
+
         startButton.setVisible(true);
 
         if (timer != null)
@@ -379,6 +386,7 @@ public class HangmanGameController implements Initializable {
         guessTextField.setEditable(true);
         usedWordText.setText("a b c d e f g h i j k l m n o p q r s t u v w x y z");
         textForWord.setText(secretWord.toString());
+        webView.setVisible(false);
         counting();
     }
 
@@ -476,8 +484,6 @@ public class HangmanGameController implements Initializable {
             return;
         }
         if (guessTextField.getText().isEmpty()) {
-            warningAlert.setContentText("You must type at least one word");
-            warningAlert.showAndWait();
             return;
         }
 
@@ -515,6 +521,9 @@ public class HangmanGameController implements Initializable {
                 endGameText.setText("Correct! Next question?");
                 guessTextField.setEditable(false);
 
+                 engine.loadContent(word.getMeaning());
+                 webView.setVisible(true);
+
                 endGameText.setVisible(true);
                 enterButton.setDisable(true);
                 nextQuestion.setVisible(true);
@@ -536,8 +545,12 @@ public class HangmanGameController implements Initializable {
                 endGameText.setVisible(true);
                 enterButton.setDisable(true);
                 resetButton.setVisible(true);
+                webView.setVisible(true);
 
                 guessTextField.setEditable(false);
+
+                engine.loadContent(word.getMeaning());
+
 
 
                 textForWord.setText(word.getName());
