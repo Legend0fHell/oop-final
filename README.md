@@ -1,9 +1,8 @@
 # Application to support learning English using Java
 
-//done!
 
 ## Author
-
+//done!
 Group Loli
 
 1. Pham Nhat Quang - 23020413
@@ -11,11 +10,10 @@ Group Loli
 3. Phan Quang Truong - 23020443
 4. Phi Tran Toan - 19021373
 
-//Voice RSS, GG translate, JvFX, SQLite3
-//maybe add later, almost done
 
 ## Description
-
+//Voice RSS, GG translate, JvFX, SQLite3
+//maybe add later, almost done
 The application is designed to support learning English. The application is written in Java and uses the JavaFX library. The application is based on the MVC model. The application use SQLite3 for storing data with enormous types of languages, also Voice RSS - Text-to-speech API for turning user's voices into text and Google Translate API helping translate to your languages as well.
 
 1. The application is designed to support learning English.
@@ -25,24 +23,21 @@ The application is designed to support learning English. The application is writ
 5. The application use Voice RSS, a TTS API, for turning speech to text.
 6. The application is equipped with a Google Translate API to translate word.
 
-//maybe add later
 
 ## UML diagram
-
+//maybe add later
 ![UML diagram](
 
-//maybe add later, almost done
 
 ## Installation
-
+//maybe add later, almost done
 1. Clone the project from the repository.
 2. Open the project in the IDE.
 3. Run the project.
 
-//Sửa sau khi có UI-UX
 
 ## Usage
-
+//Sửa sau khi có UI-UX
 1. Select mode: English-Vietnamese or Vietnamese-English to choose the dictionary.
 2. Search for a word in the dictionary and click the Search button, then the right side of the window will display the meaning of the word.
 3. To add a new word, click the Add button (Plus icon).
@@ -62,16 +57,14 @@ The application is designed to support learning English. The application is writ
    - To reset the score, click the Reset button (Reset icon).
 9. To exit the application, click the Exit button (Cross icon).
 
-//maybe add later
 
 ## Demo
-
+//maybe add later
 ![Demo](
 
-//maybe add later, almost done
 
 ## Future improvements
-
+//maybe add later, almost done
 1. Improve the user interface.
 2. Add more complex games (Hangman, Quizz, ...).
 3. Optimize the word lookup algorithm (Trie).
@@ -79,20 +72,17 @@ The application is designed to support learning English. The application is writ
 5. Integrate the application with API of Google Translate to translate paragraphs and whole documents.
 6. Integrate the application with API of Voice RSS to Text to convert speech to text.
 
-//done !
 
 ## Contributing
-
+//done !
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-//done !
 
 ## Project status
-
+//done !
 The project is completed.
 
-//done!
 
 ## Notes
-
+//done!
 The application is written for educational purposes.
