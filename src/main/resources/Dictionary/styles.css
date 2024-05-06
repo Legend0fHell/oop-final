@@ -1,0 +1,67 @@
+/* Thay đổi màu nền của ứng dụng */
+.root {
+    /*-fx-background-color: #2b2d30; !* Màu nền mới cho toàn bộ ứng dụng *!*/
+    -fx-background-color: #1f1e1f;
+}
+
+#left {
+    -fx-background-color: #2b2d30;
+}
+
+/* Cập nhật màu của các nút với class button-hover */
+.button-hover {
+    -fx-background-color: #2b2d30; /* Màu mới cho nút */
+    -fx-text-fill: white; /* Màu chữ trên nút để tăng độ tương phản */
+    -fx-pref-width: 250px;
+    -fx-pref-height: 60px;
+    -fx-font-weight: bold; /* làm in đậm */
+    -fx-font-size: 14px; /* tăng kích thước chữ */
+    -fx-alignment: center-left;
+    -fx-padding: 0 20;
+}
+
+.button-hover:hover {
+    -fx-background-color: #0e5de2; /* Màu khi di chuột qua */
+}
+
+
+#searchField {
+    -fx-min-height: 50px;
+    -fx-font-size: 18px;
+}
+
+#gridPane2 {
+    -fx-min-height: 800px;
+    -fx-padding: 20px 0 200px 0;
+}
+
+#wordField {
+    -fx-min-width: 785px;
+    -fx-min-height: 50px;
+    -fx-font-size: 18px;
+}
+
+#meaningArea {
+    -fx-min-height: 650px;
+    -fx-font-size: 16px;
+}
+
+Label {
+    -fx-text-fill: white;
+}
+
+.button-container {
+    -fx-alignment: CENTER; /* Canh giữa */
+}
+
+.button-container .button {
+    -fx-min-width: 100px; /* Đặt chiều rộng tối thiểu */
+    -fx-min-height: 25px; /* Đặt chiều cao tối thiểu */
+}
+
+.button-search {
+    -fx-min-width: 100px;
+    -fx-max-width: 100px;
+    -fx-min-height: 25px;
+    -fx-max-height: 25px;
+}
