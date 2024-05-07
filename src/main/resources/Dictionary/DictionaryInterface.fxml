@@ -62,7 +62,7 @@
         </VBox>
 
 
-        <VBox fx:id="vBox1" alignment="TOP_CENTER" spacing="10.0" style="-fx-padding: 20 0 0 0;">
+        <VBox fx:id="vBox1" alignment="TOP_CENTER" spacing="20.0" style="-fx-padding: 20 0 0 0;">
             <TextField fx:id="searchField" promptText="Search a word..." onAction="#handleSearch"/>
             <Button text="Search" onAction="#handleSearch" styleClass="button-search"/>
             <ListView fx:id="wordsList"/>
