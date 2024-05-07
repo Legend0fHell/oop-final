@@ -34,45 +34,66 @@ The application is designed to support learning English. The application is writ
 
 ## Usage
 
-<!-- 1. Select mode: English-Vietnamese or Vietnamese-English to choose the dictionary.
-2. Search for a word in the dictionary and click the Search button, then the right side of the window will display the meaning of the word.
-3. To add a new word, click the Add button (Plus icon).
-4. To delete a word, click the Delete button (Minus icon).
-5. To edit a word, click the Edit button (Pencil icon).
-6. To save the changes, click the Save button (Disk icon).
-7. To pronounce the word, click the Pronounce button (Speaker icon).
-8. To practice, click the Practice button (Play icon), then the application will display a Game window.
-   - In the Game window, click the Start button to start the game.
-   - The application will display a word that is removed some letters, you need to enter the missing letters in the text box and click the Check button to check the answer.
-   - If the answer is correct, the application will display a new word and increase the score by 1.
-   - If the answer is incorrect, the application will display a new word and decrease the score by 1.
-   - To exit the game, click the Exit button (Cross icon).
-   - To play again, click the Play again button (Play icon).
-   - To save the score, click the Save button (Disk icon).
-   - To load the score, click the Load button (Folder icon).
-   - To reset the score, click the Reset button (Reset icon).
-9. To exit the application, click the Exit button (Cross icon).
- -->
-
  <!-- Phats am
 Bo sung phan result table -->
 
-1. Select mode: Search and Translate or Add, Modify or Remove.
-2. In Search and Translate, there are 4 parts: Search Bar, Search Button, Words List and Result Table.
-   - To search word, click your mouse to the search bar then type your word that you want to translate into other languages and click on Search Button. If that word doesn't exist, Word List won't show anything.
-   - To translate word, first search the word, then take a look at the Result Table. If that word doesn't exist, Result Table won't show anything.
-   - To change to "Add, Modify or Remove" click the button having the same name.
-3. In Add, Modify or Remove, there are 3 parts: Word Bar, Add Button, Modify Button, Remove Button.
-   - Word Bar1 : "Enter word you want to add or modify"
-   - Word Bar2 : "Type the meaning of above word..."
-   - Add Button : "Add"
-   - Modify Button : "Update"
-   - Remove Button : "Delete"
-   - To add word, type the word in the Word Bar1 and its meaning in the Word Bar2, then click on the Add Button, then search word to check the result.
-   - To modify word, type the word in the Word Bar1 and its meaning in the Word Bar2, then click on the Modify Button, then search word to check the result. If that word doesn't exist, it will be add in the dictionary.
-   - To remove word, type the word in the Word Bar1, then click on the Remove Button, then search word to check the result. If that word doesn't exist, it seems meaningless to do that with our dictionary :).
-4.
+1. Select mode: _**Search and Translate**_ or _**Add, Modify or Remove**_, _**Translate Text and Speech**_ and **_Play HangMan_** and _**Play Quiz Game**_ .
+2. In Search and Translate, there are 4 parts: _Search Bar_, _Words List_, _US/UK Pronounce_, _Add/Remove/Modify Button_ and _Result Table_.
+   
+Button Titles or Positions:
+   - _**Search Bar**_ : "Search a word...".
+   - _**Words List**_ : under Search Bar.
+   - _**US/UK Pronounce**_ : Speaker items.
+   - _**Add/Remove/Modify Button**_ : ....
+   - _**Result Table**_ : under Words List.
+   
+Using Guide:
+   - To search word, click your mouse to the search bar then type your word that you want to translate into other 
+   languages then take a look at Words List. If that word doesn't exist, Words List won't show anything.
+   - To translate word, first search the word, then take a look at the Result Table. If that word doesn't exist, 
+   Result Table won't show anything.
+   - To speech a word, first search word then click on the US/UK Pronounce Button. If that word doesn't exist,
+   US/UK Pronounce Button is not useful.
+   - To Add/Remove/Modify, ....
+3. In Add, Modify or Remove, there are 5 parts: _Word Bar1_, _Word Bar2_, _Add Button_, _Modify Button_, _Remove Button_.
+   
+Button Titles or Positions:
+   - _**Word Bar1**_ : "Enter word you want to add or modify"
+   - _**Word Bar2**_ : "Type the meaning of above word..."
+   - _**Add Button**_ : "Add"
+   - _**Modify Button**_ : "Update"
+   - _**Remove Button**_ : "Delete"
+   
+Using Guide:
+   - To add word, type the word in the Word Bar1 and its meaning in the Word Bar2, then click on the Add Button, then 
+   search word to check the result.
+   - To modify word, type the word in the Word Bar1 and its meaning in the Word Bar2, then click on the Modify Button, 
+   then search word to check the result. If that word doesn't exist, it will be add in the dictionary.
+   - To remove word, type the word in the Word Bar1, then click on the Remove Button, then search word to check the 
+   result. If that word doesn't exist, it seems meaningless to do that with our dictionary :).
+4. In Translate Text and Speech, there are 4 parts: _Text Box_, _Translate Button_, _Speech Button_, _Translated Text Box_.
 
+Button Titles or Positions:
+   - _**Text Box**_: "Nhập văn bản tiếng Anh..."
+   - _**Translate Button**_: "Translate"
+   - _**Speech Button**_: "Speech"
+   - _**Translated Text Box**_ : "Translated text..."
+
+Using Guide:
+   - To translate text, type your text or copy/paste into the Text Box then click on Speech Button and take a look at Translated Text Box.
+   If any word in the text is meaningless, translator will return that word.
+   - To turn text into sound, first type the text and translate, then click on the Speech Button under the Translated Text Box.
+5. In HangMan Game:
+   - To start the game, click the "Start" button.
+   - You must find the right English word hidden by "*".
+   - To answer, type your character in answer box and click answer button.
+   - To clear the character that you typed by mistake, click "X" button of the right side of answer button.
+   - When HangMan complete that means you lose and the game over will be printed, if not you will jump to next word until you get game over.
+6. In Quiz Game:
+   - To start the game, click the "Start Game" button.
+   - To answer, choose A,B,C or D. If you get the right answer you will get 10 point else you have nothing.
+   - The right answer has a blue color, others has a red one.
+   - You have to answer 50 questions, and at each range of points you will get a kind of compliments.
 ## Demo
 
 //maybe add later
@@ -82,8 +103,8 @@ Bo sung phan result table -->
 
 //maybe add later, almost done
 
-1. Improve the user interface.
-2. Add more complex games (Hangman, Quizz, ...).
+1. Improve the user interface by using CSS.
+2. Add more complex games (Hangman, Quizz).
 3. Optimize the word lookup algorithm (Trie).
 4. Use a database to store data (SQL).
 5. Integrate the application with API of Google Translate to translate paragraphs and whole documents.
@@ -91,15 +112,12 @@ Bo sung phan result table -->
 
 ## Contributing
 
-//done !
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## Project status
 
-//done !
 The project is completed.
 
 ## Notes
 
-//done!
 The application is written for educational purposes.
