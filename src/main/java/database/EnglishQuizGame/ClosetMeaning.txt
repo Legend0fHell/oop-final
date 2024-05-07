@@ -1,7 +1,7 @@
 Mark the letter A, B, C or D to indicate the sentence that is closet in meaning to each of the following question.
 : The basketball team knew they lost the match. They soon started to blame each other.
 A. Hardly had the basketball team known they lost the match when they started to blame each other.
-B. Not only did the basketball team lose the match but they blamed each other as well.
+B. Not only did the basketball team lose the match, but they blamed each other as well.
 C. No sooner had the basketball team started to blame each other than they knew they lost the match.
 D. As soon as they blamed each other, the basketball team knew they lost the match.
 A
@@ -269,10 +269,123 @@ B. Not until the general’s personal diaries published did the truth come out.
 C. Hardly were the general’s personal diaries published than the truth came out.
 D. Only when the general’s personal diaries were published did the truth come out.
 D
-
-
-
-
-
-
-
+ : They argued for hours before finally reaching an agreement.
+A. No sooner had they reached an agreement than they argued for hours.
+B. Not until they had argued for hours did they reach an agreement.
+C. Having reached an agreement, they argued for hours.
+D. They argued for hours and then an agreement was reached.
+D
+ : She was so tired that she could barely speak.
+A. She was too tired to speak.
+B. She was very tired so that she could speak.
+C. Despite being tired, she could speak.
+D. Because of her tiredness, she couldn’t speak.
+A
+ : We hurried to the airport only to find that our flight had been delayed.
+A. Only after hurrying to the airport did we find out our flight had been delayed.
+B. We hurried to the airport in order to find our flight was delayed.
+C. As soon as we hurried to the airport, our flight was delayed.
+D. Despite hurrying to the airport, our flight was delayed anyway.
+A
+ : Just as I sat down to relax, the phone rang.
+A. No sooner had I sat down to relax than the phone rang.
+B. The phone rang as soon as I sat down to relax.
+C. I sat down to relax and then the phone rang.
+D. Having sat down to relax, the phone rang.
+A
+ : He failed the exam because he hadn’t studied hard enough.
+A. If he had studied hard enough, he wouldn’t have failed the exam.
+B. He hadn’t studied hard enough; therefore, he failed the exam.
+C. He only failed the exam because he hadn’t studied hard enough.
+D. Despite studying hard enough, he still failed the exam.
+A
+ : The lecture was so boring that many students fell asleep.
+A. Because the lecture was boring, many students fell asleep.
+B. So boring was the lecture that many students fell asleep.
+C. The lecture being boring, many students fell asleep.
+D. The students fell asleep due to the boring lecture.
+A
+ : Let me know if you need any help.
+A. If you need any help, I might let you know.
+B. In case of needing help, let me know.
+C. You need to let me know if you need help.
+D. I will help you only if you let me know.
+B
+ : The accident happened because the driver was speeding.
+A. Had the driver not been speeding, the accident wouldn’t have happened.
+B. The speeding driver caused the accident.
+C. The accident wouldn’t have happened if the driver hadn’t been speeding.
+D. It was the speeding that led to the accident.
+A
+ : We can go for a walk if it stops raining.
+A. If it stops raining, then we can go for a walk.
+B. We can only go for a walk when it stops raining.
+C. It needs to stop raining so we can go for a walk.
+D. Stop raining so we can go for a walk.
+A
+ : The scientist conducted many experiments before making a breakthrough.
+A. Not until the scientist made a breakthrough did he conduct many experiments.
+B. The scientist conducted many experiments in order to make a breakthrough.
+C. The scientist’s many experiments led to a breakthrough.
+D. After conducting many experiments, the scientist made a breakthrough.
+B
+ : He left the house without an umbrella, and it began to rain heavily.
+A. No sooner had he left the house than it began to rain heavily.
+B. He forgot his umbrella and then it rained heavily.
+C. Because he left his umbrella at home, it started raining heavily.
+D. It rained heavily as he was leaving the house without an umbrella.
+A
+ : Mary was feeling ill, so she decided to go to bed early.
+A. Mary went to bed early because she was feeling unwell.
+B. Mary’s illness resulted in her early bedtime.
+C. Despite feeling unwell, Mary went to bed early.
+D. Although it was early, Mary’s illness made her go to bed.
+A
+ : The lecture was so boring that many students fell asleep.
+A. Because the lecture was uninteresting, many students slept.
+B. So uninteresting was the lecture that many students fell asleep.
+C. The students fell asleep due to the lecture’s lack of interest.
+D. Many students slept during the uninteresting lecture.
+B
+ : Let me know if you need any help.
+A. If you need help, I will tell you.
+B. In case you need some help, you can let me know.
+C. You should only ask for help if you need it.
+D. Needing help, you can ask me to let you know.
+B
+ : We can go for a walk if the weather clears up.
+A. The weather needs to clear up before we can go for a walk.
+B. If the weather is clear, we will be able to go for a walk.
+C. Only when the weather gets better can we go for a walk.
+D. Because of the good weather, we can go for a walk.
+A
+ : The scientist conducted many experiments before making a breakthrough.
+A. The scientist’s numerous experiments led to a breakthrough.
+B. Not until the scientist made a breakthrough did he conduct many experiments.
+C. The scientist conducted many experiments in order to achieve a breakthrough.
+D. The scientist’s breakthrough came about after many experiments.
+A
+ : Having finished his homework, Nam went to play football.
+A. Nam went to play football after he had finished his homework.
+B. Because Nam had finished his homework, he went to play football.
+C. Nam’s completion of his homework allowed him to play football.
+D. With homework done, Nam played football.
+A
+ : Despite working hard, he failed the exam.
+A. He worked hard but still failed the exam.
+B. He failed the exam even though he had worked hard.
+C. Because he failed the exam, he had to work hard.
+D. Only if he had worked hard would he have passed the exam.
+A
+ : If you practice speaking English more, you will improve.
+A. The more you practice speaking English, the better you will become.
+B. You will improve your English only by practicing speaking more.
+C. Your English improvement depends on how much you practice speaking.
+D. Without practicing speaking more, you cannot improve your English.
+A
+ : The deadline is approaching. We need to start working on the project as soon as possible.
+A. With the approaching deadline, we should get started on the project soon.
+B. The project needs to be started as soon as possible because of the deadline.
+C. We will start working on the project only when the deadline approaches.
+D. The sooner we start on the project, the sooner the deadline will be.
+A

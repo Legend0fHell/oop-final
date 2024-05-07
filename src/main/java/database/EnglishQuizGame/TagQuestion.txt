@@ -27,7 +27,7 @@ C
 A. didn’t they
 B. did he
 C. did they
-D. didn’t he
+D. didn’t he.
 A
 : It seems that the test will be very difficult, ______ ?
 A. doesn’t it
@@ -81,7 +81,7 @@ D
 A. will we
 B. won’t you
 C. do you
-D. shall we
+D. shall we.
 A
 : Mary has to work overtime tonight, ______ ?
 A. hasn’t she
@@ -105,7 +105,7 @@ A
 A. aren’t they
 B. weren’t they
 C. hadn’t they
-D. won’t they
+D. won’t they.
 A
 : Your battery is running low, ______ ?
 A. aren’t you
@@ -149,3 +149,122 @@ B. didn’t she
 C. hasn’t she        
 D. doesn’t she
 B
+: You are going to the party tonight, ________?
+A. aren't you
+B. don't you
+C. won't you
+D. wouldn't you
+A
+: She has already finished her homework, ________?
+A. hasn't she
+B. doesn't she
+C. didn't she
+D. won't she.
+A
+: They will be here on time, ________?
+A. won't they
+B. don't they
+C. aren't they
+D. haven't they
+A
+: I have never seen that movie before, ________?
+A. have I
+B. do I
+C. am I
+D. did I
+A
+: The train leaves at 10 o'clock, ________?
+A. doesn't it
+B. wasn't it
+C. didn't it
+D. hasn't it
+: You wouldn't like to come with me, ________?
+A. would you
+B. should you
+C. might you
+D. could you
+A
+: I can't speak Spanish very well, ________?
+A. can I
+B. could I
+C. may I
+D. might I
+A
+: She is a doctor, ________?
+A. isn't she
+B. wasn't she
+C. didn't she
+D. wouldn't she
+A
+: We should study harder for the exam, ________?
+A. shouldn't we
+B. wouldn't we
+C. couldn't we
+D. mightn't we
+A
+: You didn't see him yesterday, ________?
+A. did you
+B. didn't you
+C. weren't you
+D. hadn't you
+A
+: I have to go now, ________?
+A. don't I
+B. haven't I
+C. mustn't I
+D. wouldn't I
+A
+: They have been living in London for 5 years, ________?
+A. haven't they
+B. don't they
+C. aren't they
+D. wouldn't they
+A
+: The weather is nice today, ________?
+A. isn't it
+B. wasn't it
+C. didn't it
+D. wouldn't it
+A
+: You can play the piano, ________?
+A. can't you
+B. couldn't you
+C. mustn't you
+D. wouldn't you
+A
+: She is not coming to the party, ________?
+A. is she
+B. isn't she
+C. does she
+D. doesn't she
+A
+: We have to finish this project by tomorrow, ________?
+A. don't we
+B. haven't we
+C. mustn't we
+D. wouldn't we
+B
+: I didn't understand the question, ________?
+A. did I
+B. didn't I
+C. wasn't I
+D. hadn't I
+A
+: You used to live in Hanoi, ________?
+A. didn't you
+B. weren't you
+C. hadn't you
+D. wouldn't you
+A
+: They are not married yet, ________?
+A. are they
+B. aren't they
+C. do they
+D. don't they
+A
+: I can borrow your book, ________?
+A. can't I
+B. couldn't I
+C. mustn't I
+D. wouldn't I
+A

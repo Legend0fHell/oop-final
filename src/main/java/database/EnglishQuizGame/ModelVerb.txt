@@ -30,7 +30,7 @@ C. We needn’t discuss this matter in great detail.
 D. We mustn’t discuss this matter in great detail.
 C
  :	It’s very likely that the company will accept his application.
-A. The company needs accept his application.
+A. The company needs to accept his application.
 B. The company might accept his application.
 C. The company must accept his application.
 D. The company should accept his application.
@@ -173,9 +173,195 @@ B. Korean men from the age of  may serve the army for two years.
 C. Korean men from the age of  can’t serve the army for two years.
 D. Korean men from the age of  needn’t serve the army for two years.
 A
- :Students are not allowed to use dictionaries in the examination room.
+ : Students are not allowed to use dictionaries in the examination room.
 A. Students mustn’t use dictionaries in the examination room.
 B. Students needn’t use dictionaries in the examination room.
 C. Students shouldn’t use dictionaries in the examination room.
 D. Students might not use dictionaries in the examination room.
 A
+ : You _______ finish your homework before you go out to play.
+A. must
+B. have to
+C. can
+D. should
+A
+ : You _______ smoke in this hospital.
+A. must
+B. have to
+C. can't
+D. should
+C
+ : You _______ study harder for your exams.
+A. must
+B. have to
+C. can
+D. should
+D
+ : _______ you help me with this math problem?
+A. must
+B. have to
+C. can
+D. should
+C
+ : We _______ go to the beach because it was raining.
+A. must
+B. have to
+C. can't
+D. should
+C
+ : She _______ be coming to the party tonight.
+A. must
+B. have to
+C. can
+D. might
+D
+ : I _______ to buy some groceries before the weekend.
+A. must
+B. have to
+C. can
+D. need
+D
+ : You don't _______ come to my meeting if you're busy.
+A. must
+B. have to
+C. can
+D. don't have to
+B
+ : I _______ like to travel to Europe someday.
+A. must
+B. have to
+C. can
+D. would
+D
+ : She _______ play the piano when she was a child.
+A. must
+B. have to
+C. can
+D. used to
+D
+ : I _______ you to try that new roller coaster.
+A. must
+B. have to
+C. can
+D. dare
+D
+ : It is _______ to eat a healthy diet.
+A. must
+B. have to
+C. can
+D. important
+D
+ : You _______ apologize for what you did.
+A. must
+B. have to
+C. can
+D. ought to
+D
+ : She _____ be a doctor if she had studied harder.
+A. might
+B. could
+C. would have
+D. had
+C
+ : _____ you please pass me the salt?
+A. Can
+B. Could
+C. Would
+D. Might
+A
+ : The students _____ arrive on time for the exam.
+A. must
+B. have to
+C. should
+D. need
+A
+ : It _____ rain tomorrow, so bring an umbrella.
+A. might
+B. may
+C. could
+D. would
+A
+ : I _____ speak three languages fluently.
+A. can
+B. am able to
+C. could
+D. would
+A
+ : You _____ not smoke in this hospital.
+A. mustn't
+B. shouldn't
+C. aren't allowed to
+D. can't
+A
+: We _____ go to the beach if the weather is nice.
+A. might
+B. could
+C. would
+D. should
+A
+ : She _____ be very tired because she worked all night.
+A. must
+B. should
+C. ought to
+D. may
+A
+ : I _____ drive a car when I was 16.
+A. could
+B. was able to
+C. used to
+D. would
+C
+ : You _____ not copy other students' work.
+A. mustn't
+B. shouldn't
+C. aren't allowed to
+D. can't
+A
+ : The plane _____ take off on time because of the bad weather.
+A. couldn't
+B. wasn't able to
+C. didn't manage to
+D. wouldn't
+A
+ : I _____ finish my project on time if I had more help.
+A. might
+B. could
+C. would have
+D. should have
+C
+ : You _____ not eat so much junk food.
+A. shouldn't
+B. ought to
+C. mustn't
+D. must
+A
+ : She _____ sing beautifully when she was a child.
+A. could
+B. used to
+C. was able to
+D. would
+B
+ : We _____ go to the cinema tonight if you're free.
+A. might
+B. could
+C. would
+D. should
+A
+ : You _____ not tell anyone my secret.
+A. mustn't
+B. shouldn't
+C. aren't allowed to
+D. can't
+A
+ : The car _____ start because the battery was dead.
+A. couldn't
+B. wasn't able to
+C. didn't manage to
+D. wouldn't
+A
+ : I _____ speak Spanish if I had taken a Spanish class.
+A. might
+B. could
+C. would have
+D. should have
+C
