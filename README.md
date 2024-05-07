@@ -23,7 +23,6 @@ The application is designed to support learning English. The application is writ
 
 ## UML diagram
 
-//maybe add later
 ![UML diagram](
 
 ## Installation
@@ -37,8 +36,8 @@ The application is designed to support learning English. The application is writ
  <!-- Phats am
 Bo sung phan result table -->
 
-1. Select mode: _**Search and Translate**_ or _**Add, Modify or Remove**_, _**Translate Text and Speech**_ and **_Play HangMan_** and _**Play Quiz Game**_ .
-2. In Search and Translate, there are 4 parts: _Search Bar_, _Words List_, _US/UK Pronounce_, _Add/Remove/Modify Button_ and _Result Table_.
+_**1**_. Select mode: _**Search and Translate**_ or _**Add, Modify or Remove**_, _**Translate Text and Speech**_ and **_Play HangMan_** and _**Play Quiz Game**_ .
+_**2**_. In Search and Translate, there are 4 parts: _Search Bar_, _Words List_, _US/UK Pronounce_, _Add/Remove/Modify Button_ and _Result Table_.
    
 Button Titles or Positions:
    - _**Search Bar**_ : "Search a word...".
@@ -55,7 +54,7 @@ Using Guide:
    - To speech a word, first search word then click on the US/UK Pronounce Button. If that word doesn't exist,
    US/UK Pronounce Button is not useful.
    - To Add/Remove/Modify, ....
-3. In Add, Modify or Remove, there are 5 parts: _Word Bar1_, _Word Bar2_, _Add Button_, _Modify Button_, _Remove Button_.
+_**3**_. In Add, Modify or Remove, there are 5 parts: _Word Bar1_, _Word Bar2_, _Add Button_, _Modify Button_, _Remove Button_.
    
 Button Titles or Positions:
    - _**Word Bar1**_ : "Enter word you want to add or modify"
@@ -71,7 +70,7 @@ Using Guide:
    then search word to check the result. If that word doesn't exist, it will be add in the dictionary.
    - To remove word, type the word in the Word Bar1, then click on the Remove Button, then search word to check the 
    result. If that word doesn't exist, it seems meaningless to do that with our dictionary :).
-4. In Translate Text and Speech, there are 4 parts: _Text Box_, _Translate Button_, _Speech Button_, _Translated Text Box_.
+_**4**_. In Translate Text and Speech, there are 4 parts: _Text Box_, _Translate Button_, _Speech Button_, _Translated Text Box_.
 
 Button Titles or Positions:
    - _**Text Box**_: "Nhập văn bản tiếng Anh..."
@@ -83,25 +82,22 @@ Using Guide:
    - To translate text, type your text or copy/paste into the Text Box then click on Speech Button and take a look at Translated Text Box.
    If any word in the text is meaningless, translator will return that word.
    - To turn text into sound, first type the text and translate, then click on the Speech Button under the Translated Text Box.
-5. In HangMan Game:
+_**5**_. In HangMan Game:
    - To start the game, click the "Start" button.
    - You must find the right English word hidden by "*".
    - To answer, type your character in answer box and click answer button.
    - To clear the character that you typed by mistake, click "X" button of the right side of answer button.
    - When HangMan complete that means you lose and the game over will be printed, if not you will jump to next word until you get game over.
-6. In Quiz Game:
+_**6**_. In Quiz Game:
    - To start the game, click the "Start Game" button.
    - To answer, choose A,B,C or D. If you get the right answer you will get 10 point else you have nothing.
    - The right answer has a blue color, others has a red one.
    - You have to answer 50 questions, and at each range of points you will get a kind of compliments.
 ## Demo
 
-//maybe add later
 ![Demo](
 
 ## Future improvements
-
-//maybe add later, almost done
 
 1. Improve the user interface by using CSS.
 2. Add more complex games (Hangman, Quizz).
