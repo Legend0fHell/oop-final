@@ -20,7 +20,7 @@ public class API {
     // string const for language code
     public static final String VIETNAMESE = "vi-vn";
     public static final String ENGLISH_US = "en-us";
-    public static final String ENGLISH_UK = "en-uk";
+    public static final String ENGLISH_UK = "en-gb";
     public static final String AUTO = "";
     private static final String API_KEY = "ee1a861047db41e3aed6cca75554a826";
     private static final String AUDIO_PATH = "src/main/resources/media/audio.wav";

@@ -2,6 +2,7 @@ package controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXMLLoader;
@@ -213,7 +214,7 @@ public class DictionaryController extends DictionaryManagement implements Initia
             Parent root = FXMLLoader.load(getClass().getResource("/EnglishQuizzGame/QuizGameController.fxml"));
             // Create a new stage for the Hangman game
             Stage hangmanStage = new Stage();
-            hangmanStage.setTitle("Hangman Game"); // Set the title for the Hangman game window
+            hangmanStage.setTitle("Quiz Game"); // Set the title for the Hangman game window
             hangmanStage.setScene(new Scene(root)); // Set the scene for this stage
             hangmanStage.show(); // Display the Hangman game window
         } catch (IOException e) {
@@ -232,6 +233,17 @@ public class DictionaryController extends DictionaryManagement implements Initia
     public void handleSpeech() throws Exception {
         String translatedText = translated.getText().trim();
         API.speech(translatedText, API.VIETNAMESE, 1.0f);
+    }
+    @FXML
+    private void handleUSspeech(ActionEvent event) throws Exception {
+        String selectedWord = wordsList.getSelectionModel().getSelectedItem();
+        API.speech(selectedWord, API.ENGLISH_US, 1.0f);
+    }
+
+    @FXML
+    private void handleUKspeech(ActionEvent event) throws Exception {
+        String selectedWord = wordsList.getSelectionModel().getSelectedItem();
+        API.speech(selectedWord, API.ENGLISH_UK, 1.0f);
     }
 
 
