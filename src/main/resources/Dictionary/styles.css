@@ -65,3 +65,19 @@ Label {
     -fx-min-height: 25px;
     -fx-max-height: 25px;
 }
+
+#vBox3 {
+    -fx-min-height: 800px;
+}
+
+#textField {
+    -fx-min-width: 785px;
+    -fx-min-height: 340px;
+    -fx-font-size: 18px;
+}
+
+#translated {
+    -fx-min-width: 785px;
+    -fx-min-height: 340px;
+    -fx-font-size: 18px;
+}

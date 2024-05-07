@@ -7,18 +7,18 @@ import java.util.List;
 import java.util.Scanner;
 
 public class DictionaryCommandline extends DictionaryManagement {
-
     public static void main(String[] args) {
         DictionaryManagement dm = new DictionaryManagement();
 
         boolean check = true;
 
         while (check) {
-
+            // menu display
             System.out.println("[0]  Exit\n[1]  Add\n[2]  Remove\n[3]  Update\n[4]  Count\n[5]  Definition\n" +
                     "[6]  Search");
-            System.out.println("Your action: ");
+            System.out.println("Your action : ");
 
+            // user selection
             Scanner sc = new Scanner(System.in);
             int sl = -1;
 
@@ -45,7 +45,7 @@ public class DictionaryCommandline extends DictionaryManagement {
             {
                 System.out.println("Word you want to remove :");
                 String rm = sc.nextLine();
-                dm.deleteWord(new Word(rm, ""));
+                dm.deleteWord(new Word(rm,""));
             } else if (sl == 3) // Update
             {
                 System.out.println("Word you want to fix :");
@@ -80,5 +80,7 @@ public class DictionaryCommandline extends DictionaryManagement {
             }
         }
     }
+
+
 }
 

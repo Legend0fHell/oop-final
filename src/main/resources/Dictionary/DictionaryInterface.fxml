@@ -36,8 +36,30 @@
                 </graphic>
             </Button>
 
-        </VBox>
+            <Button fx:id="button3" text="   Translate Text and Speech" styleClass="button-hover" onAction="#handleButton3Click">
+                <graphic>
+                    <ImageView fitWidth="30" fitHeight="30">
+                        <Image url="@modifyw.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
 
+            <Button fx:id="button4" text="   Play HangMan" styleClass="button-hover" onAction="#handleHangmanLaunch">
+                <graphic>
+                    <ImageView fitWidth="30" fitHeight="30">
+                        <Image url="@hangman.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button fx:id="button5" text="   Play HangMan" styleClass="button-hover" onAction="#handleQuizgameLaunch">
+                <graphic>
+                    <ImageView fitWidth="30" fitHeight="30">
+                        <Image url="@ideas.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+        </VBox>
 
 
         <VBox fx:id="vBox1" alignment="TOP_CENTER" spacing="10.0" style="-fx-padding: 20 0 0 0;">
@@ -57,6 +79,15 @@
                 <Button text="Delete" onAction="#handleDelete" styleClass="button"/>
             </HBox>
         </GridPane>
+
+        <VBox fx:id="vBox3" alignment="TOP_CENTER" spacing="10.0" style="-fx-padding: 20 0 0 0;">
+            <TextArea fx:id="textField" promptText="Nhập văn bản tiếng Anh..." wrapText="true"/>
+
+            <Button text="Translate" onAction="#handleTranslate" styleClass="button-search"/>
+            <TextArea fx:id="translated" promptText="Translated text..." wrapText="true"/>
+            <Button text="Speech" onAction="#handleSpeech" styleClass="button-search"/>
+        </VBox>
+
 
     </HBox>
 </VBox>

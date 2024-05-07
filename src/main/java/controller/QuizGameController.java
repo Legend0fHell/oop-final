@@ -85,6 +85,7 @@ public class QuizGameController implements Initializable {
         startButton.setVisible(true);
 
 
+
         try {
             setUpQuestionsAndAnswer();
         } catch (IOException e) {

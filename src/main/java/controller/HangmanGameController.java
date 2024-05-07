@@ -174,6 +174,7 @@ public class HangmanGameController implements Initializable {
         word = new Word();
 
 
+
         // set Highest score.
 
         try {
@@ -268,6 +269,7 @@ public class HangmanGameController implements Initializable {
         usedWordText.setVisible(true);
 
         startButton.setVisible(false);
+
 
 
         reset();
@@ -492,11 +494,10 @@ public class HangmanGameController implements Initializable {
         if (!usedCharacter.contains(guess)) {
             StringBuilder temp = new StringBuilder();
             temp.append(usedWordText.getText());
-            for (int i = 0; i < temp.length(); i++)
-                if (temp.charAt(i) == guess) {
-                    temp.deleteCharAt(i);
-                    break;
-                }
+            for (int i = 0; i < temp.length(); i++) if (temp.charAt(i) == guess) {
+                temp.deleteCharAt(i);
+                break;
+            }
             usedWordText.setText(temp.toString());
         }
 
@@ -520,8 +521,8 @@ public class HangmanGameController implements Initializable {
                 endGameText.setText("Correct! Next question?");
                 guessTextField.setEditable(false);
 
-                engine.loadContent(word.getMeaning());
-                webView.setVisible(true);
+                 engine.loadContent(word.getMeaning());
+                 webView.setVisible(true);
 
                 endGameText.setVisible(true);
                 enterButton.setDisable(true);
@@ -549,6 +550,7 @@ public class HangmanGameController implements Initializable {
                 guessTextField.setEditable(false);
 
                 engine.loadContent(word.getMeaning());
+
 
 
                 textForWord.setText(word.getName());
