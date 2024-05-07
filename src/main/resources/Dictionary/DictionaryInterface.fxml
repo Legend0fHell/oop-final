@@ -52,7 +52,7 @@
                 </graphic>
             </Button>
 
-            <Button fx:id="button5" text="   Play HangMan" styleClass="button-hover" onAction="#handleQuizgameLaunch">
+            <Button fx:id="button5" text="   Play Quiz Game" styleClass="button-hover" onAction="#handleQuizgameLaunch">
                 <graphic>
                     <ImageView fitWidth="30" fitHeight="30">
                         <Image url="@ideas.png"/>
