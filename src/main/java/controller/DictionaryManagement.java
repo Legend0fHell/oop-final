@@ -3,11 +3,13 @@ package controller;
 import database.Database;
 import logic.Trie;
 import logic.Word;
+
 import java.util.List;
 
 public class DictionaryManagement {
     private Trie trie;
     private Database database;
+
     public DictionaryManagement() {
         trie = new Trie();
         try {
@@ -15,13 +17,14 @@ public class DictionaryManagement {
             List<Word> words = database.getAllWordsName();
             int wordCnt = 0;
             for (Word word : words) {
-                if(trie.insertWord(word)) wordCnt++;
+                if (trie.insertWord(word)) wordCnt++;
             }
             System.out.printf("Database loaded successfully!\n%d words in the DB, %d words in the Trie.\n", words.size(), wordCnt);
         } catch (Exception e) {
             System.out.println(e.toString());
         }
     }
+
     public List<String> search(String name) {
         return trie.getAllWordNames(name);
     }

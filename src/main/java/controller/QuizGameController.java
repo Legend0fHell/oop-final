@@ -12,6 +12,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
+import logic.Question;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -82,7 +83,6 @@ public class QuizGameController implements Initializable {
         endGameText.setVisible(false);
 
         startButton.setVisible(true);
-
 
 
         try {

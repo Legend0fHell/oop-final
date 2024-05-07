@@ -1,4 +1,4 @@
-package controller;
+package logic;
 
 public class Question {
     private String bigQuestion;

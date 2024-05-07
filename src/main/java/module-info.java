@@ -16,4 +16,6 @@ module org.loli.dictionary {
 
     opens controller to javafx.fxml;
     exports controller;
+    exports logic;
+    opens logic to javafx.fxml;
 }

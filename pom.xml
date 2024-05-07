@@ -154,7 +154,6 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <!-- MAIN APP TEMPORARILY BEING QUIZ GAME-->
                             <mainClass>org.loli.dictionary/org.loli.dictionary.Main</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
