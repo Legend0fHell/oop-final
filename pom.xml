@@ -123,6 +123,13 @@
             <version>3.45.3.0</version>
         </dependency>
         <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>oop-final</artifactId>
+            <version>latest.version</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/voicerss_tts.jar</systemPath>
+        </dependency>
+        <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-graphics</artifactId>
             <version>21-ea+24</version>
