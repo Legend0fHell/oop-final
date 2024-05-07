@@ -3,7 +3,6 @@ package controller;
 import database.Database;
 import logic.Trie;
 import logic.Word;
-
 import java.util.List;
 
 public class DictionaryManagement {

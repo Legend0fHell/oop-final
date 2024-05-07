@@ -1,6 +1,9 @@
 package controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -11,7 +14,11 @@ import logic.Word;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
-public class DictionaryController extends DictionaryCommandline {
+import java.net.URL;
+import java.util.List;
+import java.util.ResourceBundle;
+
+public class DictionaryController extends DictionaryManagement implements Initializable {
 
     @FXML
     private TextField searchField;
@@ -23,8 +30,10 @@ public class DictionaryController extends DictionaryCommandline {
     private TextArea meaningArea;
 
     @FXML
+    private ObservableList<String> filteredWordsObsList;
+    private ObservableList<String> allWordsCacheObsList;
+    @FXML
     private ListView<String> wordsList;
-
     @FXML
     private TextField wordInputField;
 
@@ -37,11 +46,40 @@ public class DictionaryController extends DictionaryCommandline {
     @FXML
     private GridPane gridPane2;
 
-    // This method initializes the controller and sets up the mouse click event for the ListView
-    public void initialize() {
+    public DictionaryController() throws Exception {
+        super();
+        filteredWordsObsList = FXCollections.observableArrayList();
+        List<String> words = search("");
+        allWordsCacheObsList = FXCollections.observableArrayList(words);
+        wordsList = new ListView<>(filteredWordsObsList);
+    }
 
+    // This method initializes the controller and sets up the mouse click event for the ListView
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        // make sure the listview updates when the filtered list changes, and handle mouse clicks
+        wordsList.setItems(filteredWordsObsList);
         wordsList.setOnMouseClicked(this::handleMouseClick);
         handleButton1Click();
+
+        // Add a listener to the search field to update the filtered list when the search field changes
+        filteredWordsObsList.addAll(allWordsCacheObsList);
+        searchField.textProperty().addListener((observable, oldValue, newValue) -> {
+            String prefix = newValue.toLowerCase().trim();
+            filteredWordsObsList.clear();
+
+            if (prefix.isEmpty()) {
+                filteredWordsObsList.addAll(allWordsCacheObsList);
+            } else {
+                try {
+                    List<String> words = search(prefix);
+                    filteredWordsObsList.addAll(words);
+                } catch (Exception e) {
+                    System.out.println(e.toString());
+                }
+            }
+        });
+
     }
 
     // Event handler for mouse click on ListView
@@ -74,9 +112,16 @@ public class DictionaryController extends DictionaryCommandline {
 
     @FXML
     public void handleSearch() {
-        wordsList.getItems().clear();
-        var results = search(searchField.getText().trim());
-        wordsList.getItems().addAll(results);
+        String prefix = searchField.getText().toLowerCase().trim();
+        filteredWordsObsList.clear();
+
+        if (prefix.isEmpty()) {
+
+            filteredWordsObsList.addAll(allWordsCacheObsList);
+        } else {
+            List<String> words = search(prefix);
+            filteredWordsObsList.addAll(words);
+        }
     }
 
     @FXML
