@@ -11,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.web.WebView;
 import javafx.scene.web.WebEngine;
@@ -25,6 +26,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import java.io.IOException;
+import java.util.concurrent.CompletableFuture;
 
 public class DictionaryController extends DictionaryManagement implements Initializable {
 
@@ -69,6 +71,8 @@ public class DictionaryController extends DictionaryManagement implements Initia
     @FXML
     private Button actionButton;
 
+    @FXML
+    private ImageView loadingIndicator;
 
     public DictionaryController() throws Exception {
         super();
@@ -305,14 +309,39 @@ public class DictionaryController extends DictionaryManagement implements Initia
     @FXML
     private void handleUSspeech(ActionEvent event) throws Exception {
         String selectedWord = wordsList.getSelectionModel().getSelectedItem();
-        API.speech(selectedWord, API.ENGLISH_US, 1.0f);
+        CompletableFuture.supplyAsync(() -> {
+            handleLoadingIndicator(true);
+            return null;
+        }).thenRun(() -> {
+            try {
+                API.speech(selectedWord, API.ENGLISH_US, 1.0f);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }).thenRun(() -> {
+            handleLoadingIndicator(false);
+        });
     }
 
     @FXML
     private void handleUKspeech(ActionEvent event) throws Exception {
         String selectedWord = wordsList.getSelectionModel().getSelectedItem();
-        API.speech(selectedWord, API.ENGLISH_UK, 1.0f);
+        CompletableFuture.supplyAsync(() -> {
+            handleLoadingIndicator(true);
+            return null;
+        }).thenRun(() -> {
+            try {
+                API.speech(selectedWord, API.ENGLISH_UK, 1.0f);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }).thenRun(() -> {
+            handleLoadingIndicator(false);
+        });
     }
 
+    public void handleLoadingIndicator(boolean state) {
+        loadingIndicator.setVisible(state);
+    }
 
 }

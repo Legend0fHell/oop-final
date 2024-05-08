@@ -23,8 +23,8 @@
       stylesheets="@styles.css">
 
     <HBox alignment="TOP_LEFT" spacing="10.0">
-        <VBox fx:id="left" alignment="TOP_CENTER" spacing="0.0">
-            <Button fx:id="button1" text="   Search and Translate" styleClass="button-hover" onAction="#handleButton1Click">
+        <VBox fx:id="left" alignment="TOP_CENTER" spacing="0.0" maxWidth="190.0">
+            <Button fx:id="button1" text="   Dictionary" styleClass="button-hover" onAction="#handleButton1Click">
                 <graphic>
                     <ImageView fitWidth="30" fitHeight="30">
                         <Image url="@searchw.png"/>
@@ -33,7 +33,7 @@
             </Button>
 
 
-            <Button fx:id="button3" text="   Translate Text and Speech" styleClass="button-hover" onAction="#handleButton3Click">
+            <Button fx:id="button3" text="   Translate" styleClass="button-hover" onAction="#handleButton3Click">
                 <graphic>
                     <ImageView fitWidth="30" fitHeight="30">
                         <Image url="@trans.png"/>
@@ -49,7 +49,7 @@
                 </graphic>
             </Button>
 
-            <Button fx:id="button5" text="   Play Quiz Game " styleClass="button-hover" onAction="#handleQuizgameLaunch">
+            <Button fx:id="button5" text="   Play Quiz Game" styleClass="button-hover" onAction="#handleQuizgameLaunch">
                 <graphic>
                     <ImageView fitWidth="30" fitHeight="30">
                         <Image url="@ideas.png"/>
@@ -59,7 +59,7 @@
         </VBox>
 
 
-        <VBox fx:id="vBox1" alignment="TOP_CENTER" spacing="20.0" style="-fx-padding: 20 0 0 0;">
+        <VBox fx:id="vBox1" alignment="TOP_CENTER" spacing="20.0" style="-fx-padding: 20 0 10 0;">
             <TextField fx:id="searchField" promptText="Search a word..." onAction="#handleSearch"/>
             <ListView fx:id="wordsList"/>
 
@@ -80,7 +80,10 @@
                     </graphic>
                 </Button>
                 <Label text="UK" style="-fx-font-size: 16px;" fx:id="spaceright"/>
-                <Pane minWidth="550" />
+                <ImageView fx:id="loadingIndicator" fitWidth="20" fitHeight="20" visible="false">
+                    <Image url="@loading.gif"/>
+                </ImageView>
+                <Pane minWidth="580" />
 
                 <Button fx:id="addButton" onAction="#handleAdd" style="-fx-background-radius: 50%; -fx-min-width: 27px; -fx-min-height: 27px; -fx-max-width: 27px; -fx-max-height: 27px; -fx-background-color: #063970;">
                     <graphic>

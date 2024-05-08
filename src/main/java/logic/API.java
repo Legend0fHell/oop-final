@@ -72,7 +72,7 @@ public class API {
         params.setBase64(false);
         params.setLanguage(lang);
         params.setVoice("Linda");
-        params.setRate((int) Math.round(-2.9936 * speed * speed + 15.2942 * speed - 12.7612));
+        params.setRate(0);
 
         byte[] voice = tts.speech(params);
 
