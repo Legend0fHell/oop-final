@@ -104,7 +104,7 @@ _**6**_. In Quiz Game:
      !["Search and Translate"](1.png)
    - Add, Modify or Remove:
      !["Add, Modify or Remove"](2.png)
-   - !["Add, Modify or Remove"](2 bonus.png)
+     !["Add, Modify or Remove"](2 bonus.png)
    - Translate Text and Speech
      !["Translate Text and Speech"](3.png)
    - Hang Man:
