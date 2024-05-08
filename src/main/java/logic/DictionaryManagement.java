@@ -1,8 +1,6 @@
 package logic;
 
 import database.Database;
-import logic.Trie;
-import logic.Word;
 
 import java.util.List;
 
@@ -42,7 +40,7 @@ public class DictionaryManagement {
         database.updateWord(word_before, word_after);
     }
 
-    public Word displayWordMeaning(String name) {
+    public Word getWordMeaning(String name) {
         return database.getMeaning(name);
     }
 }

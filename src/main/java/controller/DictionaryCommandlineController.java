@@ -60,7 +60,7 @@ public class DictionaryCommandlineController extends DictionaryManagement {
             } else if (sl == 5) {
                 System.out.println("Lookup : ");
                 String search = sc.nextLine().trim().toLowerCase();
-                Word word = dm.displayWordMeaning(search);
+                Word word = dm.getWordMeaning(search);
                 if (word != null) {
                     System.out.println(word.getMeaning());
                 } else {

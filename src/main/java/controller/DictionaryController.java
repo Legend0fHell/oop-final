@@ -196,7 +196,7 @@ public class DictionaryController extends DictionaryManagement implements Initia
                 handleButton2Click();
                 return;
             }
-            Word word = displayWordMeaning(selectedWord);
+            Word word = getWordMeaning(selectedWord);
             wordField.setText(word.getName());
             meaningArea.setText(word.getMeaning());
         }
@@ -252,7 +252,7 @@ public class DictionaryController extends DictionaryManagement implements Initia
     private void handleDefinition(String wordToDefine) {
         WebEngine webEngine = webView.getEngine();
         if (!wordToDefine.isEmpty()) {
-            Word word = super.displayWordMeaning(wordToDefine.toLowerCase());
+            Word word = super.getWordMeaning(wordToDefine.toLowerCase());
             if (word != null) {
                 String htmlContent = "<html><body>" + word.getMeaning() + "</body></html>";
                 webEngine.loadContent(htmlContent, "text/html");
