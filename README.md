@@ -11,18 +11,16 @@ Group Loli
 
 ## Description
 
-The application is designed to support learning English. The application is written in Java using the JavaFX library and CSS helping improve the application's user interface. The application is based on the MVC model. The application use SQLite3 for storing data with enormous types of languages, also Voice RSS - Text-to-speech API for turning user's voices into text and Google Translate API helping translate to your languages as well.
-
 1. The application is designed to support learning English.
 2. The application is written in Java and uses the JavaFX library.
 3. The application is based on the MVC model.
 4. The application is also written in CSS for building application's user interface.
-5. The application use Voice RSS, a TTS API, for turning speech to text.
-6. The application is equipped with a Google Translate API to translate word.
-7. The application has SQLite3 for data storing.
+5. The application uses SQLite3 databases to store enormous amount of words (110k) to serve as a dictionary.
+6. The application uses Voice RSS, API to turn text to speech.
+7. The application uses Google Translate API as a translate method.
 
-## UML diagram
-<img src="BTL OOP.svg" alt="Inheritance Tree">
+## Inheritance Tree
+<img src="img/BTL OOP.svg" alt="Inheritance Tree">
 
 ## Installation
 
@@ -103,35 +101,31 @@ _**6**_. In Quiz Game:
 ## Demo
    - Search and Translate:
      - 
-     !["Search and Translate"](1.png)
+     !["Search and Translate"](img/1.png)
    - Add, Modify or Remove:
      - 
      - Word in:
-   !["Add, Modify or Remove"](2.png)
+   !["Add, Modify or Remove"](img/2.png)
      - Result:
-     !["Add, Modify or Remove"](2%20bonus.png)
+     !["Add, Modify or Remove"](img/2%20bonus.png)
    - Translate Text and Speech
         - 
-     !["Translate Text and Speech"](3.png)
+     !["Translate Text and Speech"](img/3.png)
    - Hang Man:
         - 
-     !["Hang Man"](4.png)
+     !["Hang Man"](img/4.png)
    - Quiz Game:
      - 
-       !["Quiz"](5.png)
+       !["Quiz"](img/5.png)
 
 ## Future improvements
 
-1. Improve the user interface by using CSS.
-2. Add more complex games (Hangman, Quiz).
-3. Optimize the word lookup algorithm (Trie).
-4. Use a database to store data (SQL).
-5. Integrate the application with API of Google Translate to translate paragraphs and whole documents.
-6. Integrate the application with API of Voice RSS to Text to convert speech to text.
+1. Improve the user interface.
+2. Add more complex games.
 
 ## Contributing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Pull requests are welcome.
 
 ## Project status
 
