@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="650.0" style="-fx-background-color: #b5a881;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.QuizGameController">
    <children>
       <Button fx:id="answerA" layoutX="56.0" layoutY="439.0" mnemonicParsing="false" onAction="#answerAClicked" prefHeight="77.0" prefWidth="81.0" style="-fx-background-color: #667980;" text="A">
@@ -49,17 +51,17 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Text>
-      <Text fx:id="endGameText" fill="#a34848" layoutX="2.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="congratulation.  Your answer correctly 20 out of 20 questions" textAlignment="CENTER" wrappingWidth="649.9999999999999">
+      <Text fx:id="endGameText" fill="#a34848" layoutX="3.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="congratulation.  Your answer correctly 20 out of 20 questions" textAlignment="CENTER" wrappingWidth="649.9999999999999">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <Button fx:id="startButton" layoutX="252.0" layoutY="252.0" mnemonicParsing="false" onAction="#startButtonClicked" prefHeight="46.0" prefWidth="152.0" style="-fx-background-color: #b3a92b;" text="Start Game" textFill="#9d1313">
+      <Button fx:id="startButton" layoutX="233.0" layoutY="207.0" mnemonicParsing="false" onAction="#startButtonClicked" prefHeight="46.0" prefWidth="152.0" style="-fx-background-color: #b5a881;" textFill="#9d1313">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </Button>
-      <Button fx:id="resetButton" layoutX="249.0" layoutY="253.0" mnemonicParsing="false" onAction="#reset" prefHeight="43.0" prefWidth="152.0" style="-fx-background-color: #b3a92b;" text="Play again" textFill="#a63333">
+      <Button fx:id="resetButton" layoutX="252.0" layoutY="253.0" mnemonicParsing="false" onAction="#reset" prefHeight="43.0" prefWidth="152.0" style="-fx-background-color: #b3a92b;" text="Play again" textFill="#a63333">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>

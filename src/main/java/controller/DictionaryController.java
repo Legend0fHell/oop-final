@@ -11,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.web.WebView;
@@ -23,6 +24,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.Parent;
 import java.net.URL;
 import java.util.List;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 import java.io.IOException;
@@ -253,11 +255,14 @@ public class DictionaryController extends DictionaryManagement implements Initia
     @FXML
     private void handleHangmanLaunch() {
         try {
+            Image image = new Image(Objects.requireNonNull(getClass()
+                    .getResourceAsStream("/HangmanGame/HangmanIcons/img_7.png")));
             // Load the FXML file for the Hangman game
             Parent root = FXMLLoader.load(getClass().getResource("/HangmanGame/HangmanGameController.fxml"));
             // Create a new stage for the Hangman game
             Stage hangmanStage = new Stage();
             hangmanStage.setTitle("Hangman Game"); // Set the title for the Hangman game window
+            hangmanStage.getIcons().add(image);
             hangmanStage.setScene(new Scene(root)); // Set the scene for this stage
             hangmanStage.show(); // Display the Hangman game window
         } catch (IOException e) {
@@ -268,11 +273,14 @@ public class DictionaryController extends DictionaryManagement implements Initia
     @FXML
     private void handleQuizgameLaunch() {
         try {
+            Image image = new Image(Objects.requireNonNull(getClass()
+                    .getResourceAsStream("/EnglishQuizzGame/Icons/ideas.png")));
             // Load the FXML file for the Hangman game
             Parent root = FXMLLoader.load(getClass().getResource("/EnglishQuizzGame/QuizGameController.fxml"));
             // Create a new stage for the Hangman game
             Stage hangmanStage = new Stage();
             hangmanStage.setTitle("Quiz Game"); // Set the title for the Hangman game window
+            hangmanStage.getIcons().add(image);
             hangmanStage.setScene(new Scene(root)); // Set the scene for this stage
             hangmanStage.show(); // Display the Hangman game window
         } catch (IOException e) {

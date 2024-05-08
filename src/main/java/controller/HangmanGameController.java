@@ -10,6 +10,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
@@ -29,6 +31,8 @@ public class HangmanGameController implements Initializable {
     @FXML
     private ImageView imageViewHangman;
 
+    @FXML
+    private AnchorPane anchorPane;
 
     @FXML
     private Text questionNumberText;
@@ -109,6 +113,9 @@ public class HangmanGameController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        setBackGround();
+        setIconStartButton();
+
         Image image;
         ImageView icon;
 
@@ -122,8 +129,8 @@ public class HangmanGameController implements Initializable {
         image = new Image(Objects.requireNonNull(getClass()
                 .getResourceAsStream("/HangmanGame/HangmanIcons/img_5.png")));
         icon = new ImageView(image);
-        icon.setFitHeight(25);
-        icon.setFitWidth(25);
+        icon.setFitHeight(30);
+        icon.setFitWidth(35);
         backHomeButton.setGraphic(icon);
 
         // set icon image to reset button
@@ -141,6 +148,7 @@ public class HangmanGameController implements Initializable {
         icon.setFitHeight(30);
         icon.setFitWidth(60);
         nextQuestion.setGraphic(icon);
+
 
 
         // setWarningAlert
@@ -204,6 +212,26 @@ public class HangmanGameController implements Initializable {
         webView.setVisible(false);
 
         startButton.setVisible(true);
+    }
+
+    /**
+     * set background image for game.
+     */
+    private void setBackGround() {
+        Image  image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/HangmanGame/HangmanIcons/img.png")));
+        BackgroundImage backgroundImage = new BackgroundImage(image, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT);
+        Background background = new Background(backgroundImage);
+        anchorPane.setBackground(background);
+    }
+
+    /**
+     * set icon for start button
+     */
+    private void setIconStartButton() {
+        Image  image = new Image(Objects.requireNonNull(getClass()
+                .getResourceAsStream("/HangmanGame/HangmanIcons/img_1.png")));
+        ImageView imageView = new ImageView(image);
+        startButton.setGraphic(imageView);
     }
 
     /**

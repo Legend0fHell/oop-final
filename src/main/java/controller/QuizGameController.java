@@ -9,6 +9,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
@@ -68,6 +70,10 @@ public class QuizGameController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        Image image = new Image(Objects.requireNonNull(getClass()
+                .getResourceAsStream("/EnglishQuizzGame/Icons/img.png")));
+        ImageView icon = new ImageView(image);
+        startButton.setGraphic(icon);
 
         resetButton.setVisible(false);
         exitButton.setVisible(false);
@@ -373,8 +379,8 @@ public class QuizGameController implements Initializable {
             scoreTextField.setText("Score " + score);
 
             if (score < 100) endGameText.setText("You only scored " + score + " out of 500, what a loser");
-            else if (score < 200) endGameText.setText("Your score is " + score +
-                    "out of 500,\nmy five year old brother can do better than this");
+            else if (score < 200) endGameText.setText("Your score is only " + score +
+                    " out of 500,\na baby learning to walk still can do better than this");
             else if (score < 300)
                 endGameText.setText("You only got " + score + " out of 500, \ndo you even learn anything at school");
             else if (score < 350)
