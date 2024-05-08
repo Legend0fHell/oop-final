@@ -32,7 +32,7 @@ Group Loli
 
 _**1**_. Select mode: _**Dictionary**_ or _**Translate**_, **_Play HangMan_** and _**Play Quiz Game**_ .
 
-_**2**_. In _**Dictionary**_, there are 4 parts: _Search Bar_, _Words List_, _US/UK Pronounce_, _Add Button_, _Remove Button_, _Modify Button_ and _Result Box_.
+_**2**_. In _**Dictionary**_, there are 7 parts: _Search Bar_, _Words List_, _US/UK Pronounce_, _Add Button_, _Remove Button_, _Modify Button_ and _Result Box_.
    
 Button Titles or Positions:
    - _**Search Bar**_ : "Search a word...".
@@ -51,9 +51,22 @@ Using Guide:
    - To remove a word, first try to search it, if you found it that means that word haven't been deleted yet. Click on that word in Words List, then click Remove Button.
    - To modify a word, click on Modify Button then type your word in the first bar then type its meaning as you want to update then clcik on the button named "Update". If that word is a new word, then this function is the same as Add.
 
-_**3**_. In Translate there are 4 parts:
+_**3**_. In _**Translate**_ there are 6 parts: _Word Box1_, _Word Box2_, _Auto/Eng/Vi Input_, _Eng/Vi Translator_, _Translate Button_, _Speech Button_.
 
-_**4**_. In HangMan Game:
+Button Titles or Positions:
+  - Word Box1 : "Enter paragraph needed to translate...".
+  - Word Box2 : "Result translated text".
+  - Auto/Eng/Vi Input : Before double arrow icon.
+  - Eng/Vi Translator : After double arrow icon.
+  - Translate Button : "Translate".
+  - Speech Button : "Speech".
+
+Using Guide:
+  - To change language for input or output, click con the down-arrow icon to choose other language.
+  - To translate text to languages you want, type the text in the Word Box1, then choose type of language for input and output or translated text, then click on Translate Button, the result is in Word Box2.
+  - To speech the text, translate the text first then click on Speech Button.
+
+_**4**_. In _**HangMan Game**_:
   - To start the game, click the "Start" button.
   - You must find the right English word hidden by "*".
   - To answer, type your character in answer box and click answer button.
@@ -63,14 +76,14 @@ _**4**_. In HangMan Game:
   - When HangMan complete that means you lose and the game over will be printed, and you can try again by click Circle-Arrow to play again, if not click double-arrow button to jump to next word until game over.
   - To exit to Translator Main Menu, click on the X button on the up-right side of the game window.
 
-_**5**_. In Quiz Game:
+_**5**_. In _**Quiz Game**_:
   - To start the game, click the "Start Game" button.
   - To answer, choose A,B,C or D. If you get the right answer you will get 10 point else you have nothing.
   - To return game main menu, click the "Exit" Button. You will see a window asking you want to exit or not. Click "OK" to exit, click "Cancel" to keep playing.
   - You have to answer 50 questions, and at each range of points you will get a kind of compliments.
   - To exit to Translator Main Menu, click on the X button on the up-right side of the game window.
 ## Demo
-<!-- Nho sua 3.png-->
+
    - Dictionary:
      - 
      - Search and Speech
