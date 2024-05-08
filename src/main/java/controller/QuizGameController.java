@@ -329,7 +329,7 @@ public class QuizGameController implements Initializable {
 
         timer.cancel();
 
-        Timeline pause = new Timeline(new KeyFrame(Duration.seconds(1)
+        Timeline pause = new Timeline(new KeyFrame(Duration.seconds(0.01)
                 , new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
