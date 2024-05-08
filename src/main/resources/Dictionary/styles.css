@@ -30,11 +30,6 @@
     -fx-font-size: 18px;
 }
 
-#gridPane2 {
-    -fx-min-height: 800px;
-    -fx-padding: 20px 0 200px 0;
-}
-
 #wordField {
     -fx-min-width: 785px;
     -fx-min-height: 50px;
@@ -42,7 +37,6 @@
 }
 
 #meaningArea {
-    -fx-min-height: 650px;
     -fx-font-size: 16px;
 }
 
@@ -66,19 +60,13 @@ Label {
     -fx-max-height: 25px;
 }
 
-#vBox3 {
-    -fx-min-height: 800px;
-}
-
 #textField {
     -fx-min-width: 785px;
-    -fx-min-height: 340px;
     -fx-font-size: 18px;
 }
 
 #translated {
     -fx-min-width: 785px;
-    -fx-min-height: 340px;
     -fx-font-size: 18px;
 }
 
