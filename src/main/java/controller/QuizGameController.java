@@ -100,7 +100,7 @@ public class QuizGameController implements Initializable {
      */
 
 
-    private void setUpQuestionsAndAnswer() throws IOException {
+    protected void setUpQuestionsAndAnswer() throws IOException {
         questions = new HashMap<>();
         List<String> fileNames = new ArrayList<>(
                 Arrays.asList(
@@ -155,7 +155,7 @@ public class QuizGameController implements Initializable {
      * timer is started count down.
      */
 
-    public void setUpNewQuestion() {
+    protected void setUpNewQuestion() {
         // the game is still ongoing
         isGameOver = false;
 
@@ -187,7 +187,7 @@ public class QuizGameController implements Initializable {
      */
 
     @FXML
-    public void reset() {
+    private void reset() {
         usedQuestions.clear();
 
         resetButton.setVisible(false);
@@ -216,7 +216,7 @@ public class QuizGameController implements Initializable {
      * cancel timer.
      */
 
-    public void exitButtonClicked() {
+    private void exitButtonClicked() {
         if (!isGameOver) {
             alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Are you sure bro");
@@ -253,7 +253,7 @@ public class QuizGameController implements Initializable {
      * set up new question.
      */
 
-    public void startButtonClicked() {
+    private void startButtonClicked() {
         usedQuestions = new ArrayList<>();
 
         resetButton.setVisible(false);
@@ -278,7 +278,7 @@ public class QuizGameController implements Initializable {
      * 60 second counting down.
      */
 
-    public void setTimer() {
+    private void setTimer() {
         if (timer != null) timer.cancel();
         timer = new Timer();
         basedTime = 60;
@@ -399,28 +399,28 @@ public class QuizGameController implements Initializable {
     }
 
 
-    public void answerAClicked() {
+    private void answerAClicked() {
         if (currentQuestion.getAnswer() == 'A') {
             score += 10;
         }
         nextQuestion();
     }
 
-    public void answerBClicked() {
+    private void answerBClicked() {
         if (currentQuestion.getAnswer() == 'B') {
             score += 10;
         }
         nextQuestion();
     }
 
-    public void answerCClicked() {
+    private void answerCClicked() {
         if (currentQuestion.getAnswer() == 'C') {
             score += 10;
         }
         nextQuestion();
     }
 
-    public void answerDClicked() {
+    private void answerDClicked() {
 
         if (currentQuestion.getAnswer() == 'D') {
             score += 10;
