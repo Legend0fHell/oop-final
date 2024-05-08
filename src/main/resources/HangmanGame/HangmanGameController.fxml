@@ -22,22 +22,22 @@
          </font></TextField>
       <Text fx:id="guideText" layoutX="292.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TYPE IN YOUR CHARACTER" wrappingWidth="227.7832031250001">
          <font>
-            <Font name="Times New Roman Bold" size="14.0" />
+            <Font name="Candara Bold" size="18.0" />
          </font>
       </Text>
       <Text fx:id="textForWord" layoutX="303.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="textForWord" wrappingWidth="250.80331420898438">
          <font>
-            <Font name="Times New Roman Bold" size="28.0" />
+            <Font name="Candara Bold" size="28.0" />
          </font>
       </Text>
       <Text fx:id="endGameText" layoutX="245.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You lose! Play again?\n&quot;  &quot;Your highest score: " wrappingWidth="307.55078125">
          <font>
-            <Font name="Times New Roman Bold" size="24.0" />
+            <Font name="Candara Bold" size="24.0" />
          </font>
       </Text>
       <Text fx:id="scoreText" layoutX="190.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="scoreText" wrappingWidth="112.58709716796875">
          <font>
-            <Font name="Times New Roman Bold" size="25.0" />
+            <Font name="Candara Bold" size="25.0" />
          </font>
       </Text>
       <Button fx:id="enterButton" layoutX="292.0" layoutY="156.0" mnemonicParsing="false" onAction="#playTurn" style="-fx-background-color: Pink;" text="Answer" textAlignment="CENTER" textFill="#a33030">
@@ -47,7 +47,7 @@
       </Button>
       <Text fx:id="questionNumberText" layoutX="190.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="questionNumberText">
          <font>
-            <Font name="Times New Roman Bold" size="25.0" />
+            <Font name="Candara Bold" size="25.0" />
          </font>
       </Text>
       <Button fx:id="resetButton" layoutX="246.0" layoutY="357.0" mnemonicParsing="false" onAction="#reset" prefHeight="41.0" prefWidth="43.0" style="-fx-background-color: #818a8f;">
@@ -67,7 +67,7 @@
       </Button>
       <Text fx:id="timerText" layoutX="10.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30">
          <font>
-            <Font name="Times New Roman" size="46.0" />
+            <Font name="System Bold" size="46.0" />
          </font>
       </Text>
       <Button fx:id="startButton" layoutX="258.0" layoutY="156.0" mnemonicParsing="false" onAction="#startGame" style="-fx-background-color: #818a8f;">
@@ -81,7 +81,7 @@
          </font></Button>
       <Text fx:id="usedWordText" layoutX="264.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="a b c d e f g h i j k l m n o p q r s t u v w x y z   " wrappingWidth="307.55078125">
          <font>
-            <Font name="Times New Roman Bold" size="30.0" />
+            <Font name="Candara Bold" size="30.0" />
          </font>
       </Text>
       <WebView fx:id="webView" layoutX="519.0" layoutY="96.0" prefHeight="264.0" prefWidth="170.0" />
