@@ -54,12 +54,12 @@ Using Guide:
 _**3**_. In _**Translate**_ there are 6 parts: _Word Box1_, _Word Box2_, _Auto/Eng/Vi Input_, _Eng/Vi Translator_, _Translate Button_, _Speech Button_.
 
 Button Titles or Positions:
-  - Word Box1 : "Enter paragraph needed to translate...".
-  - Word Box2 : "Result translated text".
-  - Auto/Eng/Vi Input : Before double arrow icon.
-  - Eng/Vi Translator : After double arrow icon.
-  - Translate Button : "Translate".
-  - Speech Button : "Speech".
+  - _**Word Box1**_ : "Enter paragraph needed to translate...".
+  - _**Word Box2**_ : "Result translated text".
+  - _**Auto/Eng/Vi Input**_ : Before double arrow icon.
+  - _**Eng/Vi Translator**_ : After double arrow icon.
+  - _**Translate Button**_ : "Translate".
+  - _**Speech Button**_ : "Speech".
 
 Using Guide:
   - To change language for input or output, click con the down-arrow icon to choose other language.
