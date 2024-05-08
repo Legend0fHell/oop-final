@@ -101,16 +101,23 @@ _**6**_. In Quiz Game:
    - To exit to Translator Main Menu, click on the X button on the up-right side of the game window.
 ## Demo
    - Search and Translate:
+     - 
      !["Search and Translate"](1.png)
    - Add, Modify or Remove:
-     !["Add, Modify or Remove"](2.png)
+     - 
+     - Word in:
+   !["Add, Modify or Remove"](2.png)
+     - Result:
      !["Add, Modify or Remove"](2 bonus.png)
    - Translate Text and Speech
+        - 
      !["Translate Text and Speech"](3.png)
    - Hang Man:
+        - 
      !["Hang Man"](4.png)
    - Quiz Game:
-     !["Quiz"](5.png)
+     - 
+       !["Quiz"](5.png)
 
 ## Future improvements
 
