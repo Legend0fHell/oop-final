@@ -92,6 +92,7 @@ _**5**_. In HangMan Game:
    - To return game main screen, click "Home" Button, you will see a window asking you want to keep playing or not. Click "yes" to return main menu, else keep playing.
    - When HangMan complete that means you lose and the game over will be printed, if not you will jump to next word until you get game over.
    - To exit to Translator Main Menu, click on the X button on the up-right side of the game window.
+
 _**6**_. In Quiz Game:
    - To start the game, click the "Start Game" button.
    - To answer, choose A,B,C or D. If you get the right answer you will get 10 point else you have nothing.
