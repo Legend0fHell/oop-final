@@ -13,15 +13,17 @@ public class MainController extends Application {
     public static void main(String[] args) {
         launch();
     }
+    public static Scene dictionaryScene;
+    public static Scene translateScene;
 
     @Override
     public void start(Stage stage) throws Exception {
         Image image = new Image(Objects.requireNonNull(getClass()
                 .getResourceAsStream("/Dictionary/icon.png")));
 
-        Parent root = FXMLLoader.load(getClass().getResource("/Dictionary/DictionaryInterface.fxml"));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
+        dictionaryScene = new Scene(FXMLLoader.load(getClass().getResource("/Dictionary/DictionaryInterface.fxml")));
+        translateScene = new Scene(FXMLLoader.load(getClass().getResource("/Dictionary/TranslateInterface.fxml")));
+        stage.setScene(dictionaryScene);
         stage.getIcons().add(image);
         stage.setTitle("English Learning Application");
         stage.show();

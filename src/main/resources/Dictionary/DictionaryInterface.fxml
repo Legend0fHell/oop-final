@@ -63,7 +63,7 @@
             <ListView fx:id="wordsList"/>
 
             <HBox spacing="10">
-                <Button fx:id="USspeech" onAction="#handleUSspeech" style="-fx-background-radius: 50%; -fx-min-width: 27px; -fx-min-height: 27px; -fx-max-width: 27px; -fx-max-height: 27px; -fx-background-color: #168d5a;">
+                <Button fx:id="USspeech" onAction="#handleSpeechUS" style="-fx-background-radius: 50%; -fx-min-width: 27px; -fx-min-height: 27px; -fx-max-width: 27px; -fx-max-height: 27px; -fx-background-color: #168d5a;">
                     <graphic>
                         <ImageView fitWidth="20" fitHeight="20">
                             <Image url="@sound.png"/>
@@ -71,7 +71,7 @@
                     </graphic>
                 </Button>
                 <Label text="US" style="-fx-font-size: 16px;"/>
-                <Button fx:id="UKspeech" onAction="#handleUKspeech" style="-fx-background-radius: 50%; -fx-min-width: 27px; -fx-min-height: 27px; -fx-max-width: 27px; -fx-max-height: 27px; -fx-background-color: #168d5a;">
+                <Button fx:id="UKspeech" onAction="#handleSpeechUK" style="-fx-background-radius: 50%; -fx-min-width: 27px; -fx-min-height: 27px; -fx-max-width: 27px; -fx-max-height: 27px; -fx-background-color: #168d5a;">
                     <graphic>
                         <ImageView fitWidth="20" fitHeight="20">
                             <Image url="@sound.png"/>
@@ -79,10 +79,10 @@
                     </graphic>
                 </Button>
                 <Label text="UK" style="-fx-font-size: 16px;" fx:id="spaceright"/>
-                <ImageView fx:id="loadingIndicator" fitWidth="20" fitHeight="20" visible="false">
+                <ImageView fx:id="loadingIndicator" fitWidth="25" fitHeight="25" visible="false">
                     <Image url="@loading.gif"/>
                 </ImageView>
-                <Pane minWidth="580" />
+                <Pane minWidth="570" />
 
                 <Button fx:id="addButton" onAction="#handleAdd" style="-fx-background-radius: 50%; -fx-min-width: 27px; -fx-min-height: 27px; -fx-max-width: 27px; -fx-max-height: 27px; -fx-background-color: #063970;">
                     <graphic>
@@ -119,15 +119,6 @@
                 <Button text="Cancel" onAction="#handleActionCancel" styleClass="button"/>
             </HBox>
         </VBox>
-
-        <VBox fx:id="vBox3" alignment="TOP_CENTER" spacing="10.0" style="-fx-padding: 20 0 10 0;" minWidth="860">
-            <TextArea fx:id="textField" promptText="Nhập văn bản tiếng Anh..." wrapText="true"/>
-
-            <Button text="Translate" onAction="#handleTranslate" styleClass="button-search"/>
-            <TextArea fx:id="translated" promptText="Translated text..." wrapText="true"/>
-            <Button text="Speech" onAction="#handleSpeech" styleClass="button-search"/>
-        </VBox>
-
 
     </HBox>
 </VBox>
