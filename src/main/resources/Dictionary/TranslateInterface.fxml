@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Pane?>
+<VBox alignment="TOP_CENTER" spacing="0.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171"
+      fx:controller="controller.TranslateController" prefWidth="1070" prefHeight="650" stylesheets="@styles.css">
+
+    <HBox alignment="TOP_LEFT" spacing="10.0" >
+        <VBox fx:id="left" alignment="TOP_CENTER" spacing="0.0" maxWidth="190.0">
+            <Button fx:id="button1" text="   Dictionary" styleClass="button-hover" onAction="#handleButton1Click">
+                <graphic>
+                    <ImageView fitWidth="30" fitHeight="30">
+                        <Image url="@searchw.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+
+            <Button fx:id="button3" text="   Translate" styleClass="button-hover" >
+                <graphic>
+                    <ImageView fitWidth="30" fitHeight="30">
+                        <Image url="@trans.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button fx:id="button4" text="   Play HangMan" styleClass="button-hover" onAction="#handleHangmanLaunch">
+                <graphic>
+                    <ImageView fitWidth="30" fitHeight="30">
+                        <Image url="@hangman.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button fx:id="button5" text="   Play Quiz Game" styleClass="button-hover" onAction="#handleQuizgameLaunch">
+                <graphic>
+                    <ImageView fitWidth="30" fitHeight="30">
+                        <Image url="@ideas.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+        </VBox>
+
+        <!-- Add dropdown menu for source language selection -->
+
+        <VBox alignment="TOP_CENTER" spacing="10.0" style="-fx-padding: 20 0 10 0;" minWidth="860">
+            <TextArea fx:id="textField" promptText="Enter paragraph needed to translate..." wrapText="true"/>
+
+            <HBox alignment="TOP_CENTER" spacing="20.0" minWidth="860">
+                <ComboBox fx:id="fromLang" promptText="From..." styleClass="combo-box" minWidth="100"/>
+                <ImageView fitWidth="27" fitHeight="27">
+                    <Image url="@arrow.png"/>
+                </ImageView>
+                <ComboBox fx:id="toLang" promptText="To..." styleClass="combo-box" minWidth="100"/>
+                <ImageView fx:id="loadingIndicator" fitWidth="25" fitHeight="25" visible="false">
+                    <Image url="@loading.gif"/>
+                </ImageView>
+                <Pane minWidth="120" />
+                <Button text="Translate" onAction="#handleTranslate" styleClass="button-search"/>
+                <Button text="Speech" onAction="#handleSpeech" styleClass="button-search"/>
+            </HBox>
+
+            <TextArea fx:id="translated" promptText="Result translated text..." wrapText="true" editable="false" prefHeight="380"/>
+        </VBox>
+
+    </HBox>
+</VBox>

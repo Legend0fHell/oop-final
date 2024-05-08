@@ -59,8 +59,6 @@ public class DictionaryController extends DictionaryManagement implements Initia
     @FXML
     private VBox vBox2;
 
-    @FXML
-    private VBox vBox3;
 
     @FXML
     private TextArea textField;
@@ -84,12 +82,11 @@ public class DictionaryController extends DictionaryManagement implements Initia
 
     // This method initializes the controller and sets up the mouse click event for the ListView
     public void initialize(URL url, ResourceBundle resourceBundle) {
-// make sure the listview updates when the filtered list changes, and handle mouse clicks
+
         wordsList.setItems(filteredWordsObsList);
         wordsList.setOnMouseClicked(this::handleMouseClick);
         handleButton1Click();
 
-// Add a listener to the search field to update the filtered list when the search field changes
         filteredWordsObsList.addAll(allWordsCacheObsList);
         searchField.textProperty().addListener((observable, oldValue, newValue) -> {
             String prefix = newValue.toLowerCase().trim();
@@ -125,9 +122,6 @@ public class DictionaryController extends DictionaryManagement implements Initia
         vBox1.setManaged(true);
         vBox2.setVisible(false);
         vBox2.setManaged(false);
-
-        vBox3.setVisible(false);
-        vBox3.setManaged(false);
     }
 
     @FXML
@@ -137,21 +131,13 @@ public class DictionaryController extends DictionaryManagement implements Initia
         vBox1.setManaged(false);
         vBox2.setVisible(true);
         vBox2.setManaged(true);
-
-        vBox3.setVisible(false);
-        vBox3.setManaged(false);
     }
 
     @FXML
     private void handleButton3Click() {
-        // Hiển thị GridPane khi nhấp vào nút 2
-        vBox1.setVisible(false);
-        vBox1.setManaged(false);
-        vBox2.setVisible(false);
-        vBox2.setManaged(false);
-
-        vBox3.setVisible(true);
-        vBox3.setManaged(true);
+        Stage stage = (Stage) searchField.getScene().getWindow();
+        stage.setScene(MainController.translateScene);
+        stage.show();
     }
 
     @FXML
@@ -295,19 +281,7 @@ public class DictionaryController extends DictionaryManagement implements Initia
     }
 
     @FXML
-    public void handleTranslate() throws Exception {
-        String textToTranslate = textField.getText().trim();
-        String translatedText = API.translate(textToTranslate, API.ENGLISH_US, API.VIETNAMESE);
-        translated.setText(translatedText);
-    }
-
-    @FXML
-    public void handleSpeech() throws Exception {
-        String translatedText = translated.getText().trim();
-        API.speech(translatedText, API.VIETNAMESE, 1.0f);
-    }
-    @FXML
-    private void handleUSspeech(ActionEvent event) throws Exception {
+    private void handleSpeechUS(ActionEvent event) throws Exception {
         String selectedWord = wordsList.getSelectionModel().getSelectedItem();
         CompletableFuture.supplyAsync(() -> {
             handleLoadingIndicator(true);
@@ -324,7 +298,7 @@ public class DictionaryController extends DictionaryManagement implements Initia
     }
 
     @FXML
-    private void handleUKspeech(ActionEvent event) throws Exception {
+    private void handleSpeechUK(ActionEvent event) throws Exception {
         String selectedWord = wordsList.getSelectionModel().getSelectedItem();
         CompletableFuture.supplyAsync(() -> {
             handleLoadingIndicator(true);

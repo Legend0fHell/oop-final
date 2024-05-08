@@ -10,12 +10,14 @@ public class MainController extends Application {
     public static void main(String[] args) {
         launch();
     }
+    public static Scene dictionaryScene;
+    public static Scene translateScene;
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/Dictionary/DictionaryInterface.fxml"));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
+        dictionaryScene = new Scene(FXMLLoader.load(getClass().getResource("/Dictionary/DictionaryInterface.fxml")));
+        translateScene = new Scene(FXMLLoader.load(getClass().getResource("/Dictionary/TranslateInterface.fxml")));
+        stage.setScene(dictionaryScene);
         stage.setTitle("English Learning Application");
         stage.show();
     }
