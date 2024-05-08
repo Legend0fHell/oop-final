@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -39,6 +40,7 @@ public class DictionaryController extends DictionaryManagement implements Initia
     @FXML
     private ObservableList<String> filteredWordsObsList;
     private ObservableList<String> allWordsCacheObsList;
+    private int currentOperation = -1;
 
     @FXML
     private ListView<String> wordsList;
@@ -63,6 +65,10 @@ public class DictionaryController extends DictionaryManagement implements Initia
 
     @FXML
     private TextArea translated;
+
+    @FXML
+    private Button actionButton;
+
 
     public DictionaryController() throws Exception {
         super();
@@ -160,20 +166,82 @@ public class DictionaryController extends DictionaryManagement implements Initia
 
     @FXML
     public void handleAdd() {
-        insertWord(new Word(wordField.getText(), meaningArea.getText()));
-        handleSearch(); // Refresh the list
+        handlePreAction(1);
     }
 
     @FXML
     public void handleUpdate() {
-        updateWord(new Word(wordField.getText(), ""), new Word(wordField.getText(), meaningArea.getText()));
-        handleSearch(); // Refresh the list
+        handlePreAction(2);
     }
 
     @FXML
     public void handleDelete() {
-        deleteWord(new Word(wordField.getText(), ""));
+        handlePreAction(3);
+    }
+
+    private void handlePreAction(int operation) {
+        currentOperation = operation;
+        if (currentOperation == 1) {
+            actionButton.setText("Add");
+        }
+        if (currentOperation == 2) {
+            actionButton.setText("Update");
+            String selectedWord = wordsList.getSelectionModel().getSelectedItem();
+            System.out.println(selectedWord);
+            if (selectedWord == null || selectedWord.isEmpty()) {
+                handleButton2Click();
+                return;
+            }
+            Word word = displayWordMeaning(selectedWord);
+            wordField.setText(word.getName());
+            meaningArea.setText(word.getMeaning());
+        }
+        if(currentOperation == 3) {
+            String selectedWord = wordsList.getSelectionModel().getSelectedItem();
+            if (selectedWord == null || selectedWord.isEmpty()) {
+                return;
+            }
+            deleteWord(new Word(selectedWord, ""));
+            handlePostAction();
+            return;
+        }
+        handleButton2Click();
+    }
+    private void handlePostAction() {
+        if(currentOperation == 1) {
+            String newWord = wordField.getText();
+            searchField.setText(newWord);
+            handleDefinition(newWord);
+        }
+        if (currentOperation == 2) {
+            String updatedWord = wordField.getText();
+            searchField.setText(updatedWord);
+            handleDefinition(updatedWord);
+        }
+        if (currentOperation == 3) {
+            searchField.setText("");
+            handleDefinition("");
+        }
+        handleActionCancel();
+    }
+    public void handleAction() {
+        if (currentOperation == 1) {
+            insertWord(new Word(wordField.getText(), meaningArea.getText()));
+        }
+        if (currentOperation == 2) {
+            updateWord(new Word(wordField.getText(), ""), new Word(wordField.getText(), meaningArea.getText()));
+        }
+        handlePostAction();
+    }
+
+    public void handleActionCancel() {
+        currentOperation = -1;
+        wordField.clear();
+        meaningArea.clear();
+        handleButton1Click();
         handleSearch(); // Refresh the list
+        wordsList.getSelectionModel().selectFirst();
+        wordsList.getFocusModel().focus(0);
     }
 
     // Modified handleDefinition to accept a word as parameter

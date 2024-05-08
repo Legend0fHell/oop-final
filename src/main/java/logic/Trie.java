@@ -49,7 +49,7 @@ public class Trie {
             helperDeleteWord(root, word, 0);
         }
     }
-    // có vẻ sẽ sai ?
+
     private boolean helperDeleteWord(TrieNode trieNode, Word word, int depth) {
         if (depth == word.getName().length()) {
             if (trieNode.getEnd()) {
@@ -65,7 +65,7 @@ public class Trie {
         }
         if (helperDeleteWord(now, word, depth + 1)) {
             trieNode.getAllNodes()[num] = null;
-            return isNull(trieNode);
+            return false;
         }
         return false;
     }
