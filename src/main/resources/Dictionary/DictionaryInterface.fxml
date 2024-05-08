@@ -113,7 +113,7 @@
 
         <VBox fx:id="vBox2" alignment="TOP_CENTER" spacing="20.0" style="-fx-padding: 20 0 10 0;" minWidth="860">
             <TextField fx:id="wordField" promptText="Enter word you want to add or modify..."/>
-            <TextArea fx:id="meaningArea" promptText="Type the meaning of above word..." minHeight="500"/>
+            <TextArea fx:id="meaningArea" promptText="Type the meaning of above word..." minHeight="500" wrapText="true"/>
             <HBox spacing="10" styleClass="button-container">
                 <Button fx:id="actionButton" text="Action" onAction="#handleAction" styleClass="button"/>
                 <Button text="Cancel" onAction="#handleActionCancel" styleClass="button"/>
