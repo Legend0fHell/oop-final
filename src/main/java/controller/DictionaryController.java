@@ -17,8 +17,8 @@ import javafx.scene.web.WebView;
 import javafx.scene.web.WebEngine;
 import javafx.stage.Stage;
 import logic.API;
+import logic.DictionaryManagement;
 import logic.Word;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.Parent;
 import java.net.URL;
@@ -57,7 +57,7 @@ public class DictionaryController extends DictionaryManagement implements Initia
     private VBox vBox1;
 
     @FXML
-    private GridPane gridPane2;
+    private VBox vBox2;
 
     @FXML
     private VBox vBox3;
@@ -123,8 +123,8 @@ public class DictionaryController extends DictionaryManagement implements Initia
         // Hiển thị VBox khi nhấp vào nút 1
         vBox1.setVisible(true);
         vBox1.setManaged(true);
-        gridPane2.setVisible(false);
-        gridPane2.setManaged(false);
+        vBox2.setVisible(false);
+        vBox2.setManaged(false);
 
         vBox3.setVisible(false);
         vBox3.setManaged(false);
@@ -135,8 +135,8 @@ public class DictionaryController extends DictionaryManagement implements Initia
         // Hiển thị GridPane khi nhấp vào nút 2
         vBox1.setVisible(false);
         vBox1.setManaged(false);
-        gridPane2.setVisible(true);
-        gridPane2.setManaged(true);
+        vBox2.setVisible(true);
+        vBox2.setManaged(true);
 
         vBox3.setVisible(false);
         vBox3.setManaged(false);
@@ -147,8 +147,8 @@ public class DictionaryController extends DictionaryManagement implements Initia
         // Hiển thị GridPane khi nhấp vào nút 2
         vBox1.setVisible(false);
         vBox1.setManaged(false);
-        gridPane2.setVisible(false);
-        gridPane2.setManaged(false);
+        vBox2.setVisible(false);
+        vBox2.setManaged(false);
 
         vBox3.setVisible(true);
         vBox3.setManaged(true);

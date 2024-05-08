@@ -58,8 +58,7 @@
             </Button>
         </VBox>
 
-
-        <VBox fx:id="vBox1" alignment="TOP_CENTER" spacing="20.0" style="-fx-padding: 20 0 10 0;">
+        <VBox fx:id="vBox1" alignment="TOP_CENTER" spacing="20.0" style="-fx-padding: 20 0 10 0;" minWidth="860">
             <TextField fx:id="searchField" promptText="Search a word..." onAction="#handleSearch"/>
             <ListView fx:id="wordsList"/>
 
@@ -112,17 +111,16 @@
             <WebView fx:id="webView"/>
         </VBox>
 
-        <GridPane fx:id="gridPane2" hgap="10" vgap="10">
+        <VBox fx:id="vBox2" alignment="TOP_CENTER" spacing="20.0" style="-fx-padding: 20 0 10 0;" minWidth="860">
             <TextField fx:id="wordField" promptText="Enter word you want to add or modify..." GridPane.columnIndex="1" GridPane.rowIndex="0"/>
-            <Label></Label>
             <TextArea fx:id="meaningArea" promptText="Type the meaning of above word..."  GridPane.columnIndex="1" GridPane.rowIndex="1"/>
             <HBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="2" styleClass="button-container">
                 <Button fx:id="actionButton" text="Action" onAction="#handleAction" styleClass="button"/>
                 <Button text="Cancel" onAction="#handleActionCancel" styleClass="button"/>
             </HBox>
-        </GridPane>
+        </VBox>
 
-        <VBox fx:id="vBox3" alignment="TOP_CENTER" spacing="10.0" style="-fx-padding: 20 0 0 0;">
+        <VBox fx:id="vBox3" alignment="TOP_CENTER" spacing="10.0" style="-fx-padding: 20 0 10 0;" minWidth="860">
             <TextArea fx:id="textField" promptText="Nhập văn bản tiếng Anh..." wrapText="true"/>
 
             <Button text="Translate" onAction="#handleTranslate" styleClass="button-search"/>
