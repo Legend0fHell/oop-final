@@ -22,21 +22,17 @@ The application is designed to support learning English. The application is writ
 7. The application has SQLite3 for data storing.
 
 ## UML diagram
-
-<!-- //maybe add later -->
-![UML diagram](
+<img src="BTL OOP.svg" alt="Inheritance Tree">
 
 ## Installation
 
 1. Clone the project from the repository.
 2. Open the project in the IDE.
-3. Run the project.
+3. Run the project in Main.java.
 
 ## Usage
 
- <!-- Phats am
-Bo sung phan result table -->
-
+ <!-- Bo sung Add/Remove/Modify co dau ... -->
 _**1**_. Select mode: _**Search and Translate**_ or _**Add, Modify or Remove**_, _**Translate Text and Speech**_ and **_Play HangMan_** and _**Play Quiz Game**_ .
 
 _**2**_.In Search and Translate, there are 4 parts: _Search Bar_, _Words List_, _US/UK Pronounce_, _Add/Remove/Modify Button_ and _Result Table_.
@@ -91,25 +87,35 @@ _**5**_. In HangMan Game:
    - To start the game, click the "Start" button.
    - You must find the right English word hidden by "*".
    - To answer, type your character in answer box and click answer button.
+   - If you type more than 1 character and click answer button, there will be a warning telling you that you can't do that. Click "OK" to continue,
    - To clear the character that you typed by mistake, click "X" button of the right side of answer button.
+   - To return game main screen, click "Home" Button, you will see a window asking you want to keep playing or not. Click "yes" to return main menu, else keep playing.
    - When HangMan complete that means you lose and the game over will be printed, if not you will jump to next word until you get game over.
-
+   - To exit to Translator Main Menu, click on the X button on the up-right side of the game window.
 _**6**_. In Quiz Game:
    - To start the game, click the "Start Game" button.
    - To answer, choose A,B,C or D. If you get the right answer you will get 10 point else you have nothing.
    - The right answer has a blue color, others has a red one.
+   - To return game main menu, click the "Exit" Button. You will see a window asking you want to exit or not. Click "OK" to exit, click "Cancel" to keep playing.
    - You have to answer 50 questions, and at each range of points you will get a kind of compliments.
+   - To exit to Translator Main Menu, click on the X button on the up-right side of the game window.
 ## Demo
-
-<!-- //maybe add later -->
-![Demo](
+   - Search and Translate:
+     !["Search and Translate"](1.png)
+   - Add, Modify or Remove:
+     !["Add, Modify or Remove"](2.png)
+   - !["Add, Modify or Remove"](2 bonus.png)
+   - Translate Text and Speech
+     !["Translate Text and Speech"](3.png)
+   - Hang Man:
+     !["Hang Man"](4.png)
+   - Quiz Game:
+     !["Quiz"](5.png)
 
 ## Future improvements
 
-<!-- //maybe add later, almost done -->
-
 1. Improve the user interface by using CSS.
-2. Add more complex games (Hangman, Quizz).
+2. Add more complex games (Hangman, Quiz).
 3. Optimize the word lookup algorithm (Trie).
 4. Use a database to store data (SQL).
 5. Integrate the application with API of Google Translate to translate paragraphs and whole documents.
