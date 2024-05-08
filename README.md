@@ -22,7 +22,7 @@ The application is designed to support learning English. The application is writ
 7. The application has SQLite3 for data storing.
 
 ## UML diagram
-<img src="BTL OOP.svg" alt="Inheritance Tree">
+<iframe src="https://lucid.app/lucidchart/b16912a5-903c-43cd-bef1-c072695db7c4/edit?invitationId=inv_b629a14d-8b44-4da9-8c15-8a594e80dae5" class="iframe-responsive"></iframe>
 
 ## Installation
 
