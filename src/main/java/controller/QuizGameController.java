@@ -374,7 +374,7 @@ public class QuizGameController implements Initializable {
 
             if (score < 100) endGameText.setText("You only scored " + score + " out of 500, what a loser");
             else if (score < 200) endGameText.setText("Your score is " + score +
-                    "\nout of 500, my five year old brother can do better than this");
+                    "out of 500,\nmy five year old brother can do better than this");
             else if (score < 300)
                 endGameText.setText("You only got " + score + " out of 500, \ndo you even learn anything at school");
             else if (score < 350)
