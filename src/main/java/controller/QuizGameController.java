@@ -216,6 +216,7 @@ public class QuizGameController implements Initializable {
      * cancel timer.
      */
 
+    @FXML
     private void exitButtonClicked() {
         if (!isGameOver) {
             alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -253,6 +254,7 @@ public class QuizGameController implements Initializable {
      * set up new question.
      */
 
+    @FXML
     private void startButtonClicked() {
         usedQuestions = new ArrayList<>();
 
@@ -399,6 +401,7 @@ public class QuizGameController implements Initializable {
     }
 
 
+    @FXML
     private void answerAClicked() {
         if (currentQuestion.getAnswer() == 'A') {
             score += 10;
@@ -406,6 +409,7 @@ public class QuizGameController implements Initializable {
         nextQuestion();
     }
 
+    @FXML
     private void answerBClicked() {
         if (currentQuestion.getAnswer() == 'B') {
             score += 10;
@@ -413,6 +417,7 @@ public class QuizGameController implements Initializable {
         nextQuestion();
     }
 
+    @FXML
     private void answerCClicked() {
         if (currentQuestion.getAnswer() == 'C') {
             score += 10;
@@ -420,6 +425,7 @@ public class QuizGameController implements Initializable {
         nextQuestion();
     }
 
+    @FXML
     private void answerDClicked() {
 
         if (currentQuestion.getAnswer() == 'D') {
