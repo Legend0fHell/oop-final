@@ -362,7 +362,8 @@ public class HangmanGameController implements Initializable {
 
         // set word from database
         word = database.getRandomWord();
-        while (word.getName().length() > 10 || word.getName().length() < 2 || word.getName().contains("-")) {
+        while (word.getName().length() > 10 || word.getName().length() < 2 || word.getName().contains("-")
+        || word.getName().contains(" ") || word.getName().contains("'")) {
 
             word = database.getRandomWord();
         }
